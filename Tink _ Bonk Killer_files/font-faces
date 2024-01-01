@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://cdn.zyrosite.com/u1/google-fonts/font-file?family=Catamaran:wght@400&subset=tamil&display=swap) format('woff2');
+  src: "./css1.woff2" format('woff2');
   unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
 }
 /* latin-ext */
