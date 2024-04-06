@@ -41,9 +41,9 @@ body {
 	font-family: 'Outfit', sans-serif;
 	font-weight: normal;
 	font-size: 16px;
-	color: #fafafa;
+	color: black;
 	font-style: normal;
-	background-color: #822cab;
+	background-color: #ffffff;
 	line-height: 1.75;
 }
 body.white-background {
@@ -113,7 +113,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Poppins', sans-serif;
-	color: #FFFFFF;
+	color: black;
 	margin-top: 0px;
 	font-style: normal;
 	font-weight: 600;
@@ -125,7 +125,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-	color: inherit;
+	color: black;
 }
 h1 {
 	font-size: 40px;
@@ -156,11 +156,11 @@ p {
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.75;
-	color: rgb(219, 219, 219);
+	color: black;
 	margin-bottom: 15px;
 }
 hr {
-	border-bottom: 1px solid #eceff8;
+	border-bottom: 1px solid black;
 	border-top: 0 none;
 	margin: 30px 0;
 	padding: 0;
@@ -235,7 +235,7 @@ label {
 	background: #040E18;
 	border-radius: 70px;
 	border: 2px solid transparent;
-	color: #fff;
+	color: black;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 15px;
@@ -374,7 +374,7 @@ label {
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: black;
     padding: 45px 0;
     display: block;
     line-height: 1;
@@ -412,7 +412,7 @@ label {
 }
 .navbar-wrap > ul > li.active > a,
 .navbar-wrap > ul > li:hover > a {
-	color: #fff;
+	color: black;
 }
 .main-menu .navigation li.menu-item-has-children .dropdown-btn {
     display: none;
@@ -573,7 +573,7 @@ label {
 	top: 0;
 	width: 100%;
 	z-index: 99;
-	background: #822cab;
+	background: #fff;
 	-webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
 	animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
 	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
@@ -1315,7 +1315,7 @@ label {
 }
 .section-title .sub-title {
 	text-transform: uppercase;
-	color: #fff;
+	color: black;
 	font-size: 14px;
 	font-weight: 700;
 	position: relative;
@@ -1351,7 +1351,7 @@ label {
 .about-content p {
 	margin-bottom: 40px;
 	width: 73%;
-	color: #fafafa;
+	color: black;
 }
 .partner-wrap ul {
 	display: flex;
@@ -1502,7 +1502,7 @@ label {
 	margin-bottom: 0px;
 	font-size: 15px;
 	line-height: 22px;
-	color: #fafafa;
+	color: black;
 }
 .choose-area .sr-only {
 	position: absolute;
@@ -1530,7 +1530,7 @@ label {
 
 /* choose-two */
 .choose-bg {
-	background-image: url(../img/bg/choose_bg.jpg);
+	/* background-image: url(../img/bg/choose_bg.jpg); */
 	background-size: cover;
 	background-position: center;
 	padding: 130px 0 218px;
