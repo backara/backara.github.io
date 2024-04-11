@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://www.bukopneyaw.club/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="pointer skrollr skrollr-desktop">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style id="customRules"></style>
+    <link rel="icon" type="image/png" href="./BUK OP NEYAW_files/meocon.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="./BUK OP NEYAW_files/meocon.jpg">
+    <script async="" src="./BUK OP NEYAW_files/sp-2.0.0-dm-0.1.min.js.tải xuống"></script>
+    <script type="text/javascript">
+        window._currentDevice = 'desktop';
+        window.Parameters = window.Parameters || {
+            HomeUrl: '#',
+            AccountUUID: '42b00a7133a440f6947f490ca37b76ad',
+            SystemID: 'US_DIRECT_PRODUCTION',
+            SiteAlias: 'e5335f73',
+            SiteType: atob('RFVEQU9ORQ=='),
+            PublicationDate: 'Wed Apr 10 15:23:39 UTC 2024',
+            ExternalUid: 'f4de4ee6-e2c6-11ee-833f-3417ebe725e0',
+            IsSiteMultilingual: false,
+            InitialPostAlias: '',
+            InitialDynamicItem: '',
+            DynamicPageInfo: {
+                isDynamicPage: false,
+                base64JsonRowData: 'null',
+            },
+            InitialPageAlias: 'home',
+            InitialPageUuid: 'dcef710083034039ac03fcffaedb7ace',
+            InitialPageId: '1149123599',
+            InitialEncodedPageAlias: 'aG9tZQ==',
+            CurrentPageUrl: '',
+            IsCurrentHomePage: true,
+            AllowAjax: false,
+            AfterAjaxCommand: null,
+            HomeLinkText: 'Back To Home',
+            UseGalleryModule: false,
+            CurrentThemeName: 'Layout Theme',
+            ThemeVersion: '43430',
+            DefaultPageAlias: '',
+            RemoveDID: true,
+            WidgetStyleID: null,
+            IsHeaderFixed: false,
+            IsHeaderSkinny: false,
+            IsBfs: true,
+            StorePageAlias: 'null',
+            StorePagesUrls: 'e30=',
+            IsNewStore: 'false',
+            StorePath: '',
+            StoreId: 'null',
+            StoreVersion: 0,
+            StoreBaseUrl: '',
+            StoreCleanUrl: true,
+            StoreDisableScrolling: true,
+            IsStoreSuspended: false,
+            NotificationSubDomain: 'bukopneyaw',
+            HasCustomDomain: true,
+            SimpleSite: false,
+            showCookieNotification: false,
+            cookiesNotificationMarkup: 'null',
+            translatedPageUrl: '',
+            isFastMigrationSite: false,
+            sidebarPosition: 'LEFT',
+            currentLanguage: 'en',
+            currentLocale: 'en',
+            NavItems: '{}',
+            errors: {
+                general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+                password: 'Incorrect name/password combination',
+                tryAgain: 'Try again'
+            },
+            NavigationAreaParams: {
+                ShowBackToHomeOnInnerPages: true,
+                NavbarSize: 4,
+                NavbarLiveHomePage: '#',
+                BlockContainerSelector: '.dmBody',
+                NavbarSelector: '#dmNav:has(a)',
+                SubNavbarSelector: '#subnav_main'
+            },
+            hasCustomCode: false,
+            planID: '1623',
+            customTemplateId: 'null',
+            siteTemplateId: 'null',
+            productId: 'DM_DIRECT',
+            disableTracking: false,
+            pageType: 'FROM_SCRATCH',
+            isRuntimeServer: true,
+            isInEditor: false,
+        };
+
+        window.Parameters.LayoutID = {};
+        window.Parameters.LayoutID[window._currentDevice] = 6;
+        window.Parameters.LayoutVariationID = {};
+        window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Injecting site-wide to the head -->
+
+
+
+
+    <!-- End Injecting site-wide to the head -->
+
+    <!-- Inject secured cdn script -->
+
+
+    <!-- ========= Meta Tags ========= -->
+    <!-- PWA settings -->
+    <script>
+        function toHash(str) {
+            var hash = 5381, i = str.length;
+            while (i) {
+                hash = hash * 33 ^ str.charCodeAt(--i)
+            }
+            return hash >>> 0
+        }
+    </script>
+    <script>
+        (function (global) {
+            //const cacheKey = global.cacheKey;
+            const isOffline = 'onLine' in navigator && navigator.onLine === false;
+            const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+            if (isOffline) {
+                console.log('offline mode');
+            }
+            if (!hasServiceWorkerSupport) {
+                console.log('service worker is not supported');
+            }
+            if (hasServiceWorkerSupport && !isOffline) {
+                window.addEventListener('load', function () {
+                    const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+                    navigator.serviceWorker
+                        .register(serviceWorkerPath, { scope: './' })
+                        .then(
+                            function (registration) {
+                                // Registration was successful
+                                console.log(
+                                    'ServiceWorker registration successful with scope: ',
+                                    registration.scope
+                                );
+                            },
+                            function (err) {
+                                // registration failed :(
+                                console.log('ServiceWorker registration failed: ', err);
+                            }
+                        )
+                        .catch(function (err) {
+                            console.log(err);
+                        });
+                });
+
+                // helper function to refresh the page
+                var refreshPage = (function () {
+                    var refreshing;
+                    return function () {
+                        if (refreshing) return;
+                        // prevent multiple refreshes
+                        var refreshkey = 'refreshed' + location.href;
+                        var prevRefresh = localStorage.getItem(refreshkey);
+                        if (prevRefresh) {
+                            localStorage.removeItem(refreshkey);
+                            if (Date.now() - prevRefresh < 30000) {
+                                return; // dont go into a refresh loop
+                            }
+                        }
+                        refreshing = true;
+                        localStorage.setItem(refreshkey, Date.now());
+                        console.log('refereshing page');
+                        window.location.reload();
+                    };
+                })();
+
+                function messageServiceWorker(data) {
+                    return new Promise(function (resolve, reject) {
+                        if (navigator.serviceWorker.controller) {
+                            var worker = navigator.serviceWorker.controller;
+                            var messageChannel = new MessageChannel();
+                            messageChannel.port1.onmessage = replyHandler;
+                            worker.postMessage(data, [messageChannel.port2]);
+                            function replyHandler(event) {
+                                resolve(event.data);
+                            }
+                        } else {
+                            resolve();
+                        }
+                    });
+                }
+            }
+        })(window);
+    </script>
+    <!-- Add manifest -->
+    <!-- End PWA settings -->
+
+
+
+
+
+    <link rel="canonical" href="#">
+
+    <meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- render the required CSS and JS in the head section -->
+    <script>
+        window.SystemID = 'US_DIRECT_PRODUCTION';
+
+        if (!window.dmAPI) {
+            window.dmAPI = {
+                registerExternalRuntimeComponent: function () {
+                },
+                getCurrentDeviceType: function () {
+                    return window._currentDevice;
+                }
+            };
+        }
+
+        if (!window.requestIdleCallback) {
+            window.requestIdleCallback = function (fn) {
+                setTimeout(fn, 0);
+            }
+        }
+    </script>
+
+    <!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+    <script id="d-js-load-css">
+        /**
+         * There are a few <link> tags with CSS resource in them that are preloaded in the page
+         * in each of those there is a "onload" handler which invokes the loadCSS callback
+         * defined here.
+         * We are monitoring 3 main CSS files - the runtime, the global and the page.
+         * When each load we check to see if we can append them all in a batch. If threre
+         * is no page css (which may happen on inner pages) then we do not wait for it
+         */
+        (function () {
+            let cssLinks = {};
+            function loadCssLink(link) {
+                link.onload = null;
+                link.rel = "stylesheet";
+                link.type = "text/css";
+            }
+
+            function checkCss() {
+                const pageCssLink = document.querySelector("[id*='CssLink']");
+                const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+                if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+                    const storedRuntimeCssLink = cssLinks.runtime;
+                    const storedPageCssLink = cssLinks.page;
+                    const storedGlobalCssLink = cssLinks.global;
+                    const storedWidgetCssLink = cssLinks.widget;
+
+                    storedGlobalCssLink.disabled = true;
+                    loadCssLink(storedGlobalCssLink);
+
+                    if (storedPageCssLink) {
+                        storedPageCssLink.disabled = true;
+                        loadCssLink(storedPageCssLink);
+                    }
+
+                    if (storedWidgetCssLink) {
+                        storedWidgetCssLink.disabled = true;
+                        loadCssLink(storedWidgetCssLink);
+                    }
+
+                    storedRuntimeCssLink.disabled = true;
+                    loadCssLink(storedRuntimeCssLink);
+
+                    requestAnimationFrame(() => {
+                        setTimeout(() => {
+                            storedRuntimeCssLink.disabled = false;
+                            storedGlobalCssLink.disabled = false;
+                            if (storedPageCssLink) {
+                                storedPageCssLink.disabled = false;
+                            }
+                            if (storedWidgetCssLink) {
+                                storedWidgetCssLink.disabled = false;
+                            }
+                            // (SUP-4179) Clear the accumulated cssLinks only when we're
+                            // sure that the document has finished loading and the document 
+                            // has been parsed.
+                            if (document.readyState === 'interactive') {
+                                cssLinks = null;
+                            }
+                        }, 0);
+                    });
+                }
+            }
+
+
+            function loadCSS(link) {
+                try {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var noCSS = !!urlParams.get("nocss");
+                    var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+                    if (noCSS) {
+                        return;
+                    }
+                    if (link.href.includes("d-css-runtime")) {
+                        cssLinks.runtime = link;
+                        checkCss();
+                    } else if (link.id === "siteGlobalCss") {
+                        cssLinks.global = link;
+                        checkCss();
+                    }
+
+                    else if (link.id.includes("CssLink")) {
+                        cssLinks.page = link;
+                        checkCss();
+                    } else if (link.id.includes("widgetCSS")) {
+                        cssLinks.widget = link;
+                        checkCss();
+                    }
+
+                    else {
+                        requestIdleCallback(function () {
+                            window.setTimeout(function () {
+                                loadCssLink(link);
+                            }, parseInt(cssTimeout, 10));
+                        });
+                    }
+                } catch (e) {
+                    throw e
+                }
+            }
+            window.loadCSS = window.loadCSS || loadCSS;
+        })();
+    </script>
+
+
+
+    <script data-role="deferred-init" type="text/javascript">
+        /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+        function Def() {
+            this.promise = new Promise((function (a, b) {
+                this.resolve = a, this.reject = b
+            }).bind(this))
+        }
+
+        const defs = {};
+        window.getDeferred = function (a) {
+            return null == defs[a] && (defs[a] = new Def), defs[a]
+        }
+        window.waitForDeferred = function (b, a, c) {
+            let d = window?.getDeferred?.(b);
+            d
+                ? d.promise.then(a)
+                : c && ["complete", "interactive"].includes(document.readyState)
+                    ? setTimeout(a, 1)
+                    : c
+                        ? document.addEventListener("DOMContentLoaded", a)
+                        : console.error(`Deferred  does not exist`);
+        };
+    </script>
+    <style id="forceCssIncludes">
+        /* This file is auto-generated from a `scss` file with the same name */
+
+        .videobgwrapper {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            border-radius: inherit
+        }
+
+        .videobgframe {
+            position: absolute;
+            width: 101%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            object-fit: fill
+        }
+
+        #dm video.videobgframe {
+            margin: 0
+        }
+
+        @media (max-width:767px) {
+            .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 80vh
+            }
+        }
+
+        @media (min-width:1025px) {
+            .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 45vh
+            }
+        }
+
+        @media (min-width:768px) and (max-width:1024px) {
+            .responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+                min-height: 45vh
+            }
+        }
+
+        #dm [data-show-on-page-only] {
+            display: none !important
+        }
+
+        #dmRoot div.stickyHeaderFix div.site_content {
+            margin-top: 0 !important
+        }
+
+        #dmRoot div.stickyHeaderFix div.hamburger-header-container {
+            position: relative
+        }
+    </style>
+    <style id="cssVariables" type="text/css">
+        :root {
+            --color_1: rgba(0, 0, 0, 1);
+            --color_2: rgba(164, 45, 205, 1);
+            --color_3: rgba(255, 255, 255, 0.57);
+            --color_4: rgba(197, 197, 197, 1);
+            --color_5: rgba(255, 255, 255, 1);
+            --color_6: rgba(31, 36, 41, 1);
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- loadCSS function fonts.jsp-->
+
+
+
+    <link type="text/css" rel="stylesheet" href="./BUK OP NEYAW_files/css2">
+
+    <style>
+        @font-face {
+            font-family: "beachday";
+            src: url("https://irp.cdn-website.com/e5335f73/fonts/beachday-e9be_400.ttf");
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+
+
+
+
+
+    <!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+    <link rel="stylesheet" type="text/css"
+        href="./BUK OP NEYAW_files/d-css-runtime-desktop-one-package-structured-global.min.css">
+
+    <!-- End of RT CSS Include -->
+
+    <link type="text/css" rel="stylesheet" href="./BUK OP NEYAW_files/459217ca5a2f84d4c5ca54fe88b34834.css"
+        id="widgetCSS">
+
+    <!-- Support `img` size attributes -->
+    <style>
+        img[width][height] {
+            height: auto;
+        }
+    </style>
+
+    <!-- Support showing sticky element on page only -->
+    <style>
+        body[data-page-alias="home"] #dm [data-show-on-page-only="home"] {
+            display: block !important;
+        }
+    </style>
+
+    <!-- This is populated in Ajax navigation -->
+    <style id="pageAdditionalWidgetsCss" type="text/css">
+    </style>
+
+
+
+
+    <!-- Site CSS -->
+    <link type="text/css" rel="stylesheet" href="./BUK OP NEYAW_files/e5335f73_withFlex_1.min.css" id="siteGlobalCss">
+
+
+
+    <style id="customWidgetStyle" type="text/css">
+
+    </style>
+    <style id="innerPagesStyle" type="text/css">
+
+    </style>
+
+
+    <style id="additionalGlobalCss" type="text/css">
+    </style>
+
+    <!-- Page CSS -->
+    <link type="text/css" rel="stylesheet" href="./BUK OP NEYAW_files/e5335f73_home_withFlex_1.min.css"
+        id="homeCssLink">
+
+    <style id="pagestyle" type="text/css">
+
+    </style>
+
+    <style id="pagestyleDevice" type="text/css">
+
+    </style>
+
+    <!-- Flex Sections CSS -->
+
+
+
+
+
+    <style id="globalFontSizeStyle" type="text/css">
+        .font-size-30,
+        .size-30,
+        .size-30>font {
+            font-size: 30px !important;
+        }
+
+        .font-size-36,
+        .size-36,
+        .size-36>font {
+            font-size: 36px !important;
+        }
+
+        .font-size-48,
+        .size-48,
+        .size-48>font {
+            font-size: 48px !important;
+        }
+
+        .font-size-24,
+        .size-24,
+        .size-24>font {
+            font-size: 24px !important;
+        }
+
+        .font-size-50,
+        .size-50,
+        .size-50>font {
+            font-size: 50px !important;
+        }
+    </style>
+    <style id="pageFontSizeStyle" type="text/css">
+    </style>
+
+
+
+
+    <style id="hideAnimFix">
+        .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']),
+        .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+            visibility: hidden;
+        }
+
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']),
+        .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+            visibility: hidden !important;
+        }
+    </style>
+
+
+
+
+    <style id="fontFallbacks">
+        @font-face {
+            font-family: "Roboto Slab Fallback";
+            src: local('Arial');
+            ascent-override: 97.7562%;
+            descent-override: 25.2818%;
+            size-adjust: 107.1903%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Roboto Fallback";
+            src: local('Arial');
+            ascent-override: 92.6709%;
+            descent-override: 24.3871%;
+            size-adjust: 100.1106%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Montserrat Fallback";
+            src: local('Arial');
+            ascent-override: 84.9466%;
+            descent-override: 22.0264%;
+            size-adjust: 113.954%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: "Poppins Fallback";
+            src: local('Arial');
+            ascent-override: 92.326%;
+            descent-override: 30.7753%;
+            line-gap-override: 8.793%;
+            size-adjust: 113.7274%;
+        }
+    </style>
+
+
+    <!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+    <meta property="og:type" content="website">
+
+    <title>
+        First Cat On SPACE
+    </title>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="First Cat On SPACE  ">
+    <meta property="og:title" content="First Cat On SPACE  ">
+    <link rel="icon" type="image/png" href="./BUK OP NEYAW_files/meocon.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="./BUK OP NEYAW_files/meocon.jpg">
+
+
+
+    <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+    <script src="./BUK OP NEYAW_files/skrollr.min.js.tải xuống"></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="home"
+    class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody pcCustomScrollbar d1SiteBody dmBodyNoIscroll"
+    style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ========= Site Content ========= -->
+    <div id="dm" class="dmwr">
+
+        <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+            <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"
+                desktop-global-classes="header-over-content" tablet-global-classes="header-over-content"
+                mobile-global-classes="">
+                <div dmtemplateid="StandardLayoutMultiD"
+                    class="standardHeaderLayout dm-bfs dm-layout-home hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader hamburger-reverse header-over-content dmPageBody d-page-1716942098 dmFreeHeader runtime-module-container backgroundSlider-ff"
+                    id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true"
+                    data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex">
+                    <div id="dmStyle_outerContainer" class="dmOuter">
+                        <div id="dmStyle_innerContainer" class="dmInner">
+                            <div class="dmLayoutWrapper standard-var dmStandardDesktop">
+                                <div>
+                                    <div id="iscrollBody">
+                                        <div id="site_content">
+                                            <div class="dmHeaderContainer fHeader d-header-wrapper">
+                                                <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer"
+                                                    freeheader="true"
+                                                    headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5"
+                                                    layout="78f5c343822e4eb3aac27f4ad5d13812===header"
+                                                    data-scrollable-target="body" data-scrollable-target-threshold="1"
+                                                    data-scroll-responder-id="1" logo-size-target="66%">
+                                                    <div dm:templateorder="85"
+                                                        class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236">
+                                                        <div class="dmRespRow dmDefaultListContentRow u_1779638299 fullBleedChanged fullBleedMode mini-header-hide-row"
+                                                            style="text-align:center" id="1779638299">
+                                                            <div class="dmRespColsWrapper" id="1927180310">
+                                                                <div class="u_1095623786 small-12 dmRespCol medium-6 large-6 has-one-widget-only"
+                                                                    id="1095623786">
+                                                                    <div class="dmNewParagraph"
+                                                                        data-element-type="paragraph" data-version="5"
+                                                                        id="1368168685"
+                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                        <p class="m-size-24 size-30"><span
+                                                                                class="font-size-30 m-font-size-24"
+                                                                                style="color:var(--color_5);font-weight:bold;display:unset;font-family:beachday;">First Cat On SPACE
+                                                                                
+                                                                            </span></p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="u_1993977697 dmRespCol small-12 medium-6 large-6 has-more-one-widget"
+                                                                    id="1993977697"> <span id="1176885980"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true">
+                                            </div>
+                                            <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow ">
+                                                <div class="dmRespColsWrapper">
+                                                    <div class="large-12 dmRespCol">
+                                                        <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None">
+                                                            <div class="titleLine display_None">
+                                                                <hr>
+                                                            </div>
+                                                            <!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts -->
+                                                            <div id="pageTitleText"></div>
+                                                            <div class="titleLine display_None">
+                                                                <hr>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div dmwrapped="true" id="dmFirstContainer"
+                                                class="dmBody u_dmStyle_template_home dm-home-page"
+                                                themewaschanged="true" desktop-global-classes="header-over-content"
+                                                tablet-global-classes="header-over-content" mobile-global-classes="">
+                                                <div id="allWrapper" class="allWrapper"><!-- navigation placeholders -->
+                                                    <div id="dm_content" class="dmContent">
+                                                        <div dm:templateorder="170"
+                                                            class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl dmRespRowsWrapperSize6"
+                                                            id="1716942098" style="min-height: 422.687px;">
+                                                            <div class="u_1243667655 dmRespRow"
+                                                                style="text-align: center; opacity: 1; visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"
+                                                                id="1243667655" data-anim-desktop="fadeIn">
+                                                                <div class="dmRespColsWrapper" id="1173148036">
+                                                                    <div class="u_1620106714 dmRespCol small-12 large-7 medium-7"
+                                                                        id="1620106714"> <span id="1479169930"></span>
+                                                                        <div class="dmNewParagraph"
+                                                                            data-element-type="paragraph"
+                                                                            data-version="5" id="1323180503"
+                                                                            style="transition: opacity 1s ease-in-out 0s;">
+                                                                            <p class="m-size-29 size-36"><span
+                                                                                    class="font-size-36 m-font-size-29"
+                                                                                    style="text-transform:uppercase;color:var(--color_5);font-weight:bold;display:initial;font-family:beachday;">EMBARK
+                                                                                    ON YOUR CRYPTO ADVENTURE First Cat
+                                                                                    On SPACE: WHERE MEME BECOME YOUR
+                                                                                    INHERITANCE AND FORTUNE!!!!</span></p>
+                                                                            <p><span
+                                                                                    style="display: initial;"><br></span>
+                                                                            </p>
+                                                                            <p class="m-size-29 size-36"><span
+                                                                                    class="font-size-36 m-font-size-29"
+                                                                                    style="text-transform:uppercase;color:var(--color_5);font-weight:bold;display:initial;font-family:beachday;">CA: 
+                                                                                </span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="u_1740270548 dmRespRow"
+                                                                            id="1740270548" data-anim-desktop="fadeIn"
+                                                                            style="opacity: 1; visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;">
+                                                                            <div class="dmRespColsWrapper"
+                                                                                id="1517829696">
+                                                                                <div class="u_1788464300 dmRespCol small-12 large-5 medium-5"
+                                                                                    id="1788464300"> <a
+                                                                                        data-display-type="block"
+                                                                                        class="u_1517177913 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient button_2"
+                                                                                        file="false"
+                                                                                        href="https://t.me/FirstCatOnSPACE"
+                                                                                    
+                                                                                        data-element-type="dButtonLinkId"
+                                                                                        id="1517177913" target="_blank">
+                                                                                        <span class="iconBg"
+                                                                                            id="1560274892"> <span
+                                                                                                class="icon hasFontIcon icon-star"
+                                                                                                id="1845249563"></span>
+                                                                                        </span>
+                                                                                        <span class="text"
+                                                                                            id="1773215674">TELEGRAM</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="u_1054683596 dmRespCol small-12 large-6 medium-6"
+                                                                                    id="1054683596"> <a
+                                                                                        data-display-type="block"
+                                                                                        class="u_1625516534 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient button_2"
+                                                                                        file="false"
+                                                                                        href="https://twitter.com/FirstCatOnSPACE"
+                                                                                        data-element-type="dButtonLinkId"
+                                                                                        id="1625516534" target="_blank">
+                                                                                        <span class="iconBg"
+                                                                                            id="1243043561"> <span
+                                                                                                class="icon hasFontIcon icon-star"
+                                                                                                id="1704500990"></span>
+                                                                                        </span>
+                                                                                        <span class="text"
+                                                                                            id="1537303340">TWITTER</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="u_1052959001 dmRespCol small-12 large-1 medium-1"
+                                                                                    id="1052959001">
+                                                                                    <div data-element-type="spacer"
+                                                                                        class="dmSpacer"
+                                                                                        id="1871789217"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="u_1011576767 dmRespCol small-12 large-5 medium-5"
+                                                                        id="1011576767">
+                                                                        <div class="u_1417349726 imageWidget align-center"
+                                                                            data-element-type="image"
+                                                                            data-widget-type="image" id="1417349726"
+                                                                            editablewidget="true"><img
+                                                                                src="./BUK OP NEYAW_files/meocon.jpg"
+                                                                                alt="" id="1813168727" class=""
+                                                                                data-dm-image-path="" width="944"
+                                                                                height="854"
+                                                                                onerror="handleImageLoadError(this)">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dmRespRow u_1224154304" id="1224154304">
+                                                                <div class="dmRespColsWrapper" id="1486907522">
+                                                                    <div class="dmRespCol small-12 u_1541008272 large-2.4 medium-2.4 medium-12 large-12"
+                                                                        id="1541008272">
+                                                                        <div class="dmRespRow" id="1930489029">
+                                                                            <div class="dmRespColsWrapper"
+                                                                                id="1428897814">
+                                                                                <div class="dmRespCol large-6 medium-6 small-12"
+                                                                                    id="1237569540">
+                                                                                    <div class="dmNewParagraph text-align-center u_1873911045"
+                                                                                        data-element-type="paragraph"
+                                                                                        id="1873911045"
+                                                                                        style="transition: opacity 1s ease-in-out 0s; text-align: center; display: block;"
+                                                                                        data-version="5">
+                                                                                        <h3 style="line-height: 36px;">
+                                                                                            <span
+                                                                                                style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;">Introduction</span>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <div class="dmNewParagraph"
+                                                                                        data-element-type="paragraph"
+                                                                                        data-version="5" id="1495655704"
+                                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                                        <p><span
+                                                                                                style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;"><br></span>
+                                                                                        </p>
+                                                                                        <p><span
+                                                                                                style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;">
+                                                                                                
+                                                                                                
+
+
+
+                                                                                            </span></p>
+                                                                                        <p><span
+                                                                                                style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;">
+                                                                                                " Elon Musk " talks about cats, yes it's true, I'll let you in on a secret and what do you think it is?
+                                                                                                yes !!!
+                                                                                                
+                                                                                            </span></p>
+                                                                                        <p><span
+                                                                                                style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;">"First Cat On SPACE"
+                                                                                               
+                                                                                            </span></p>
+                                                                                        <p><span class=""
+                                                                                                style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;"><span
+                                                                                                    style="color:var(--color_1);font-weight:bold;display:initial;font-family:beachday;">will be the first cat that will be sent to space by Elon Musk.
+                                                                                                    Please join me in experiencing this wonderful thing!
+                                                                                                </span>
+                                                                                            </span></p>
+                                                                                        <p><span
+                                                                                                style="display: initial;"><br></span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="dmRespCol large-6 medium-6 small-12"
+                                                                                    id="1447620169">
+                                                                                    <div class="u_1708394595 imageWidget align-center"
+                                                                                        data-element-type="image"
+                                                                                        data-widget-type="image"
+                                                                                        id="1708394595"
+                                                                                        editablewidget="true"><img
+                                                                                            src="./BUK OP NEYAW_files/meo2.jpg"
+                                                                                            alt="" id="1890136063"
+                                                                                            class=""
+                                                                                            data-dm-image-path="https://irp.cdn-website.com/e5335f73/dms3rep/multi/x.webp"
+                                                                                            width="640" height="392"
+                                                                                            onerror="handleImageLoadError(this)">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dmRespRow u_1395565982" id="1395565982">
+                                                                <div class="dmRespColsWrapper" id="1185648402">
+                                                                    <div class="dmRespCol small-12 medium-12 large-12"
+                                                                        id="1321474444">
+                                                                        <div class="dmNewParagraph"
+                                                                            data-element-type="paragraph"
+                                                                            data-version="5" id="1824861795"
+                                                                            style="transition: opacity 1s ease-in-out 0s;">
+                                                                            <p
+                                                                                class="size-48 m-size-38 text-align-center">
+                                                                                <span
+                                                                                    style="color:var(--color_5);font-weight:bold;display:unset;font-family:beachday;"
+                                                                                    class="font-size-48 m-font-size-38">TOKENOMICS</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="dmRespRow" id="1221690847">
+                                                                            <div class="dmRespColsWrapper"
+                                                                                id="1171320111">
+                                                                                <div class="dmRespCol small-12 u_1719561894 medium-4 large-4"
+                                                                                    id="1719561894">
+                                                                                    <div class="u_1949862803 imageWidget align-center"
+                                                                                        data-element-type="image"
+                                                                                        data-widget-type="image"
+                                                                                        id="1949862803"
+                                                                                        editablewidget="true"><img
+                                                                                            src="./BUK OP NEYAW_files/meo3.jpg"
+                                                                                            alt="" id="1938411826"
+                                                                                            class=""
+                                                                                            data-dm-image-path="https://irp.cdn-website.com/e5335f73/dms3rep/multi/A-Cute-Cat-Reading-A-Book-67309415-1.png"
+                                                                                            width="1024" height="1024"
+                                                                                            onerror="handleImageLoadError(this)">
+                                                                                    </div>
+                                                                                    <div class="dmNewParagraph"
+                                                                                        data-element-type="paragraph"
+                                                                                        data-version="5" id="1912949030"
+                                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                                        <p
+                                                                                            class="text-align-center m-size-19 size-24">
+                                                                                            <span
+                                                                                                class="m-font-size-19 font-size-24"
+                                                                                                style="color:rgb(31, 36, 41);font-weight:bold;display:unset;font-family:beachday;">ZERO
+                                                                                                TAXES</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="dmRespCol small-12 u_1941021318 medium-4 large-4"
+                                                                                    id="1941021318">
+                                                                                    <div class="u_1854782703 imageWidget align-center"
+                                                                                        data-element-type="image"
+                                                                                        data-widget-type="image"
+                                                                                        id="1854782703"
+                                                                                        editablewidget="true"><img
+                                                                                            src="./BUK OP NEYAW_files/meocon.jpg"
+                                                                                            alt="" id="1937524408"
+                                                                                            class=""
+                                                                                            data-dm-image-path=""
+                                                                                            width="626" height="626"
+                                                                                            onerror="handleImageLoadError(this)">
+                                                                                    </div>
+                                                                                    <div class="dmNewParagraph"
+                                                                                        data-element-type="paragraph"
+                                                                                        data-version="5" id="1396308092"
+                                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                                        <p
+                                                                                            class="text-align-center m-size-19 size-24">
+                                                                                            <span
+                                                                                                class="m-font-size-19 font-size-24"
+                                                                                                style="color:rgb(31, 36, 41);font-weight:bold;display:unset;font-family:beachday;">MINT
+                                                                                                REVOKED</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="dmRespCol small-12 u_1376643636 medium-4 large-4"
+                                                                                    id="1376643636">
+                                                                                    <div class="u_1412790725 imageWidget align-center"
+                                                                                        data-element-type="image"
+                                                                                        data-widget-type="image"
+                                                                                        id="1412790725"
+                                                                                        editablewidget="true"><img
+                                                                                            src="./BUK OP NEYAW_files/meo2.jpg"
+                                                                                            alt="" id="1972551214"
+                                                                                            class=""
+                                                                                            data-dm-image-path="https://irp.cdn-website.com/e5335f73/dms3rep/multi/1c2ccc57f033c7b2612f1cce2b6eb7f2-bookshelf-sleeping-cat-illustration.webp"
+                                                                                            width="512" height="512"
+                                                                                            onerror="handleImageLoadError(this)">
+                                                                                    </div>
+                                                                                    <div class="dmNewParagraph"
+                                                                                        data-element-type="paragraph"
+                                                                                        data-version="5" id="1859036773"
+                                                                                        style="transition: opacity 1s ease-in-out 0s;">
+                                                                                        <p
+                                                                                            class="text-align-center m-size-19 size-24">
+                                                                                            <span
+                                                                                                class="m-font-size-19 font-size-24"
+                                                                                                style="color:rgb(31, 36, 41);font-weight:bold;display:unset;font-family:beachday;">LP
+                                                                                                BURNED</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dmRespRow u_1419267015" id="1419267015">
+                                                                <div class="dmRespColsWrapper" id="1878572484">
+                                                                    <div class="dmRespCol large-12 medium-12 small-12"
+                                                                        id="1103092704">
+                                                                        <div class="dmNewParagraph"
+                                                                            data-element-type="paragraph"
+                                                                            data-version="5" id="1579044320"
+                                                                            style="transition: opacity 1s ease-in-out 0s;">
+                                                                            <h1 class="text-align-center m-size-40 size-50"
+                                                                                style="line-height: 1.5;"><span
+                                                                                    class="m-font-size-40 font-size-50"
+                                                                                    style="color: rgb(49, 49, 49); display: unset;">chart</span>
+                                                                            </h1>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dmFooterContainer">
+                                                <div id="fcontainer"
+                                                    class="u_fcontainer f_hcontainer dmFooter p_hfcontainer">
+                                                    <div dm:templateorder="250" class="dmFooterResp generalFooter"
+                                                        id="1943048428">
+                                                        <div class="u_1948690297 dmRespRow fullBleedChanged fullBleedMode"
+                                                            style="text-align: center;" id="1948690297">
+                                                            <div class="dmRespColsWrapper" id="1105242483">
+                                                                <div class="u_1841242727 dmRespCol small-12 medium-12 large-12"
+                                                                    id="1841242727">
+                                                                    <div class="u_1183878578 imageWidget align-center"
+                                                                        data-element-type="image"
+                                                                        data-widget-type="image" id="1183878578"
+                                                                        editablewidget="true"><img
+                                                                            src="./BUK OP NEYAW_files/meocon.jpg"
+                                                                            id="1914635508" class=""
+                                                                            data-dm-image-path="https://irp.cdn-website.com/e5335f73/dms3rep/multi/nyea.png"
+                                                                            width="944" height="854"
+                                                                            onerror="handleImageLoadError(this)"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="1236746004" dmle_extension="powered_by"
+                                                        data-element-type="powered_by" icon="true" surround="false">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--  Add full CSS and Javascript before the close tag of the body if needed -->
+    <!-- ========= JS Section ========= -->
+
+    <script>
+        var isWLR = true;
+
+        window.customWidgetsFunctions = {};
+        window.customWidgetsStrings = {};
+        window.collections = {};
+        window.currentLanguage = "ENGLISH"
+        window.isSitePreview = false;
+    </script>
+    <script type="text/javascript">
+
+        var d_version = "production_4343";
+        var build = "2024-04-10T12_49_59";
+        window['v' + 'ersion'] = d_version;
+
+        function buildEditorParent() {
+            window.isMultiScreen = true;
+            window.editorParent = {};
+            window.previewParent = {};
+            window.assetsCacheQueryParam = "?version=2024-04-10T12_49_59";
+            try {
+                var _p = window.parent;
+                if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                    window.editorParent = _p;
+                } else if (_p.isSitePreview) {
+                    window.previewParent = _p;
+                }
+            } catch (e) {
+
+            }
+        }
+
+        buildEditorParent();
+    </script>
+
+    <!-- Load jQuery -->
+    <script type="text/javascript" id="d-js-jquery" src="./BUK OP NEYAW_files/jquery-3.7.0.min.js.tải xuống"></script>
+    <!-- End Load jQuery -->
+    <!-- Injecting site-wide before scripts -->
+    <!-- End Injecting site-wide to the head -->
+
+
+    <script>
+        var _jquery = window.$;
+
+        var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+        jqueryAliases.forEach((alias) => {
+            Object.defineProperty(window, alias, {
+                get() {
+                    return _jquery;
+                },
+                set() {
+                    console.warn("Trying to over-write the global jquery object!");
+                }
+            });
+        });
+        window.jQuery.migrateMute = true;
+    </script>
+    <script>
+        window.cookiesNotificationMarkupPreview = 'null';
+    </script>
+
+    <!-- HEAD RT JS Include -->
+    <script id="d-js-params">
+        window.INSITE = window.INSITE || {};
+        window.INSITE.device = "desktop";
+
+        window.rtCommonProps = {};
+        rtCommonProps["rt.ajax.ajaxScriptsFix"] = true;
+        rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+        rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+        rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+        rtCommonProps["inlineEditGrid.snap"] = true;
+        rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+        rtCommonProps["rt.pushnotifs.force.button"] = true;
+        rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+        rtCommonProps["common.mapbox.js.override"] = false;
+        rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+        rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+        rtCommonProps["isCoverage.test"] = false;
+        rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+        rtCommonProps["feature.flag.mappy.kml"] = false;
+        rtCommonProps["common.resources.dist.cdn"] = true;
+        rtCommonProps["common.build.dist.folder"] = 'production/4343';
+        rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+        rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4343';
+        rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] = true;
+        rtCommonProps["feature.flag.runtime.photoswipe.fix"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.enabled"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] = true;
+        rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] = true;
+        rtCommonProps["feature.flag.sites.google.analytics.gtag"] = true;
+        rtCommonProps["feature.flag.runOnReadyNewTask"] = true;
+        rtCommonProps["isAutomation.test"] = false;
+
+
+        rtCommonProps['common.mapsProvider'] = 'mapbox';
+
+        rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+        rtCommonProps['common.geocodeProvider'] = 'here';
+        rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+        rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+        rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+        rtCommonProps['common.map.defaults.strokeSize'] = '2';
+        rtCommonProps['server.for.resources'] = '';
+        rtCommonProps['feature.flag.lazy.widgets'] = true;
+        rtCommonProps['feature.flag.single.wow'] = false;
+        rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+        rtCommonProps['feature.flag.mark.anchors'] = true;
+        rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+        rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+        rtCommonProps["images.sizes.small"] = 160;
+        rtCommonProps["images.sizes.mobile"] = 640;
+        rtCommonProps["images.sizes.tablet"] = 1280;
+        rtCommonProps["images.sizes.desktop"] = 1920;
+        rtCommonProps["modules.resources.cdn"] = true;
+        rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+        rtCommonProps["facebook.api.version"] = '7.0';
+        rtCommonProps["feature.flag.runtime.inp.threshold"] = 150;
+        rtCommonProps["feature.flag.performance.logs"] = true;
+        rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+        rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+
+        // feature flags that's used out of runtime module (in  legacy files)
+        rtCommonProps["site.runtime.video.background.ssr"] = true;
+
+        // no usages
+        rtCommonProps["run.imageCount.script.enabled"] = false;
+
+        window.rtFlags = {};
+        rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] = true;
+        rtFlags["keyboard.navigation.enabled"] = true;
+        rtFlags["scripts.widgetCount.enabled"] = true;
+        rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+        rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+        rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+        rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+        rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+        rtFlags["feature.flag.photo.gallery.exact.size"] = false;
+        rtFlags["new.store.fix.ecwid.back.bug"] = true;
+        rtFlags["facebook.runtime.widgets.upgrade"] = true;
+        rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+        rtFlags["ecom.ecwid.configOptions"] = true;
+        rtFlags["geocode.search.localize"] = false;
+        rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] = false;
+        rtFlags["site.contact.form.fix.for.attribute"] = true;
+        rtFlags["contact.form.date.format.enabled"] = true;
+        rtFlags["twitter.heightLimit.enabled"] = true;
+        rtFlags["ecom.ecwid.fixTranslations.enabled"] = true;
+        rtFlags["runtime.load.script.native"] = true;
+        rtFlags["editor.classicHybrid.photogallery.fix"] = true;
+        rtFlags["runtime.backgroundSlider.borderRadius"] = true;
+    </script>
+    <script src="./BUK OP NEYAW_files/d-js-one-runtime-unified-desktop.min.js.tải xuống" id="d-js-core"></script>
+    <!-- End of HEAD RT JS Include -->
+    <script src="./BUK OP NEYAW_files/d-js-jquery-migrate.min.js.tải xuống"></script>
+    <script>
+
+        $(window).bind("orientationchange", function (e) {
+            $.layoutManager.initLayout();
+
+        });
+        $(document).resize(function () {
+
+        });
+    </script>
+    <script type="text/javascript" id="d_track_campaign">
+        (function () {
+            var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+            if (campaign && campaign != null && campaign.length > 1) {
+                campaign = campaign[1];
+                document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24 * 60 * 60 * 1000 + ";domain=" + window.location.hostname + ";path=/";
+            }
+        }());
+    </script>
+    <script type="text/javascript">
+        var _dm_gaq = {};
+        var _gaq = _gaq || [];
+        var _dm_insite = [];
+    </script>
+
+
+    <script type="text/javascript" id="d_track_sp">
+        ; (function (p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i); p[i] = function () {
+                    (p[i].q = p[i].q || []).push(arguments)
+                }; p[i].q = p[i].q || []; n = l.createElement(o); g = l.getElementsByTagName(o)[0]; n.async = 1;
+                n.src = w; g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js", "snowplow"));
+        window.dmsnowplow = window.snowplow;
+
+        dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+            appId: 'e5335f73'
+        });
+
+        // snowplow queries element styles so we wait until CSS calculations are done.
+        requestAnimationFrame(() => {
+            dmsnowplow('trackPageView');
+            _dm_insite.forEach((rule) => {
+                // Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+                // the tracking is in popup.js
+                if (rule.actionName !== "popup") {
+                    dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+                }
+                window?.waitForDeferred?.('dmAjax', () => {
+                    $.DM.events.trigger('event-ruleTriggered', { value: rule });
+                });
+            });
+        });
+    </script>
+    <div style="display:none;" id="P6iryBW0Wu"></div>
+
+    <!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="fb-root" data-locale="en"></div>
+    <!-- Alias: e5335f73 -->
+    <div class="dmPopupMask" id="dmPopupMask"></div>
+    <div id="dmPopup" class="dmPopup">
+        <div class="dmPopupCloseWrapper">
+            <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div>
+        </div>
+        <div class="dmPopupTitle"> <span></span> Share by:</div>
+        <div class="data"></div>
+    </div>
+    <script id="d_track_personalization">
+        window?.waitForDeferred?.('dmAjax', () => {
+            // Collects client data and updates cookies used by smart sites
+            window.expireDays = 365;
+            window.visitLength = 30 * 60000;
+            $.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+            setSmartSiteCookiesInternal("dm_this_page_view", "dm_last_page_view", "dm_total_visits", "dm_last_visit");
+        });
+    </script>
+    <script type="text/javascript">
+
+        Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+
+        Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+        Parameters.HomeLinkText = 'Home';
+    </script>
+    <!--  End Script tags -->
+
+    <!--  Site Wide Html Markup -->
+    <!--  Site Wide Html Markup -->
+
+
+</body>
+
+</html>
