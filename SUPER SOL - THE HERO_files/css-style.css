@@ -1,0 +1,912 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Cuprum:wght@400;500;600;700&family=Modak&display=swap');
+body {
+    font-family: 'Baloo Bhai 2', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background: #fff;
+    color: #000;
+}
+
+a,
+button {
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    background: #f0c000;
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+}
+
+.scrolltotop:hover {
+    background: #FFD942;
+    color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+/*==== nev area start===== */
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.logo {
+    max-width: 300px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+.menu-item ul li{
+    margin-left: 10px;
+}
+
+.menu-item ul li a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    border-radius: 45px;
+    background: rgba(6, 0, 71, 0.18);
+
+}
+
+.menu-item ul li a:hover {
+    background: #FFD942; 
+    color: #000;
+}
+
+.active a{
+    background: #FFD942 !important; 
+    color: #000 !important;
+}
+
+
+
+.menu-bar {
+    display: none;
+}
+
+.menu-bar a {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobile-icon-ss {
+    display: none;
+}
+
+/*==== nev area end===== */
+
+/*==== sticky-nev start=== */
+
+.fixed-menu {
+    background: #3BAFD9;
+    position: fixed;
+    top: 0;
+    -webkit-animation: slide-down 0.5s !important;
+            animation: slide-down 0.5s !important;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    z-index: 250;
+    -webkit-transition: .10s;
+    -o-transition: .10s;
+    transition: .10s;
+}
+
+
+@-webkit-keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50%);
+                transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50%);
+                transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap');
+/*==== sticky-nev end=== */
+
+/* ====offcanvas manu start===== */
+
+.offcanvas-header {
+    background-color: #3BAFD9;
+    border-bottom: 1px solid #DE0100;
+}
+
+.offcanvas-header h5 img {
+    max-width: 100px;
+}
+
+.offcanvas-body {
+    background-color: #3BAFD9;
+    padding: 0px !important;
+}
+
+.clloss-x {
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.clloss-x:hover {
+    color: #fff !important;
+}
+
+.offcanvas-start {
+    top: 0;
+    left: 0;
+    width: 340px;
+    z-index: 11111111111111;
+}
+
+.mobile-menu-item ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    padding: 15px 20px;
+    display: block;
+    transition: .2s;
+}
+
+.mobile-menu-item ul li a:hover {
+    background-color: #FFD942;
+    color: #000;
+}
+
+.m-active {
+    background: #FFD942;
+    color: #000 !important;
+}
+
+.mobile-menu-item ul li a i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* ====offcanvas manu end===== */
+
+/* =====hero-area-start===== */
+
+.hero-area {
+    background-color: #3BAFD9;
+    background-image: url(../images/images-h-f.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    position: relative;
+    padding: 40px 0 300px;
+}
+
+
+
+.hero-title h2 {
+    font-family: 'Sigmar One', sans-serif;
+    padding: 20px 10px;
+    color: #fff;
+    font-size: 110px; 
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-fill-color: #FFD942;
+    text-shadow: 3px 5px 0px #000;
+    -webkit-text-stroke-width: 3;
+    -webkit-text-stroke-color: #000; 
+    margin-top: 200px;
+    line-height: 80px;
+}
+.hero-area p {
+    color: #FFF;
+    font-family: "Baloo Bhai 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    margin-top: 10px;
+    margin-left: 13px;
+}
+.hero-title ul {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+
+.hero-title ul li a {
+    color: #000;
+    font-family: "Baloo Bhai 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 20px;
+    transition: .3s;
+    text-align: center;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.hero-title ul li a:hover{
+    transform: scale(1.1);
+}
+.hero-title ul li:first-of-type a{
+    border-radius: 30px;
+    border: 1.5px solid #000;
+    background: #FFD942;
+    box-shadow: 3px 3px 0px 0px #000;
+}
+.hero-title ul li:last-of-type a{
+    border-radius: 30px;
+    border: 1.5px solid #000;
+    background: #FFF;
+    box-shadow: 3px 3px 0px 0px #000;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title ul li a span{
+    display: block;
+    margin-left: 8px;
+} 
+
+.hero-right{
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+   
+}
+
+.hero-right img {
+    max-width: 1200px;
+    position: absolute;
+    left: -350px;
+    top: -300px;
+}
+
+/* about area start */
+
+.about-area {
+    padding:66px  0;
+    background: #fff;
+    background-image: url(../images/images-logo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+
+.about-right {
+    padding: 30px;
+    border-radius: 22px;
+    background: #3EDBAC;
+}
+
+.about-right h2 {
+	font-family: 'Sigmar One', sans-serif;
+	padding: 20px 10px;
+	color: #fff;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: #FFD942;
+	text-shadow: 3px 5px 0px #000;
+	-webkit-text-stroke-width: 3;
+	-webkit-text-stroke-color: #000;
+	line-height: 80px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+}
+
+.about-right p {
+    color: #000;
+    font-family: "Baloo Bhai 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    margin-bottom: 40px;
+}
+
+.about-btn- h3{
+    color: #F6CEAA;
+    text-align: center;
+    text-shadow: 3px 0px 0px #000;
+    font-family: Cuprum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 30px */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about-left img{
+  
+}
+
+
+
+/* ======our partners area start====== */
+
+.partners-area{
+    padding: 155px 0px;
+    border-bottom: 3px solid #000;
+    background: #C9F1FF;
+}
+.partners-title h2{
+    font-family: 'Sigmar One', sans-serif;
+	padding: 20px 10px;
+	color: #fff;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: #FFD942;
+	text-shadow: 3px 5px 0px #000;
+	-webkit-text-stroke-width: 3;
+	-webkit-text-stroke-color: #000;
+	line-height: 80px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+
+.pretners-items a{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 91px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.mas-pra{
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+/* =========Tokenomics area start ========*/
+
+.tokenomics-area {
+    padding: 50px 0;
+    background: #E3F1FC;
+ 
+}
+
+.tokenomic-title h2 {
+	font-family: 'Sigmar One', sans-serif;
+	padding: 20px 10px;
+	color: #fff;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: #FFD942;
+	text-shadow: 3px 5px 0px #000;
+	-webkit-text-stroke-width: 3;
+	-webkit-text-stroke-color: #000;
+	line-height: 80px;
+	margin-bottom: 20px;
+	margin-left: -10px;
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+
+.token-left-item{
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    background: linear-gradient(180deg, #B6ECFF 31.89%, #B6FFE9 100%), #FFF;
+    box-shadow: 5px 5px 0px 0px #000;
+    backdrop-filter: blur(2px);
+    
+}
+.token-left-item:last-of-type{
+    margin-top: 30px;
+}
+.copy-notification {
+    color: #000;
+    background-color: #09ff00;
+    padding: 10px;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    margin-top: -30px;
+    margin-left: -85px;
+    display: none;
+    text-align:center;
+    cursor: pointer;
+}
+
+.wallet-address p{
+    cursor: pointer;
+}
+.token-left-item h2{
+    font-family: 'Sigmar One', sans-serif;
+    padding: 20px 10px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: #FFD942;
+    text-shadow: 2px 2px 0px #000;
+    -webkit-text-stroke-width: 3;
+    -webkit-text-stroke-color: #000;
+    line-height: 80px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    line-height: 2px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+.token-left-item ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.token-left-item ul li{
+    margin-bottom: 10px;
+}
+.token-left-item ul li:first-of-type{
+    color: rgba(6, 6, 6, 0.80);
+    font-family: "Baloo Bhai 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 24px */
+}
+.token-left-item ul li:last-of-type{
+    color: #060606;
+    font-family: "Baloo Bhai 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    text-transform: capitalize;
+}
+.token-left-item p{
+    color: #060606;
+    font-family: "Baloo Bhai 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+    text-transform: capitalize;
+
+}
+
+/* token-right */
+.token-right{
+    border-radius: 20px;
+    border: 2px solid #000;
+    background: linear-gradient(180deg, #B6ECFF 31.89%, #B6FFE9 100%), #FFF;
+    box-shadow: 5px 5px 0px 0px #000;
+    padding: 27px 0px 27px 70px;
+
+}
+.token-right h3{
+    font-family: 'Sigmar One', sans-serif;
+    padding: 20px 10px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: #FFD942;
+    text-shadow: 2px 2px 0px #000;
+    -webkit-text-stroke-width: 3;
+    -webkit-text-stroke-color: #000;
+    line-height: 80px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    line-height: 2px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.token-right-content{
+    display: flex;
+}
+.token-right h2{
+    color: #F6CEAA;
+    font-family: Bungee ;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+.token-right ul {
+    /* display: flex; */
+    /* justify-content: space-between;
+    align-items: center; */
+}
+.token-right ul li{
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+}
+.token-right ul li img{
+    display: inline-block;
+    margin-right: 10px;
+}
+.token-right ul li:first-of-type{
+    color: #060606;
+    font-family: "Baloo Bhai 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+}
+.token-right ul li:last-of-type{
+    color: #1404BD;
+    font-family: "Baloo Bhai 2";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 72px */
+    text-transform: capitalize;
+}
+.token-right-rr{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+/* =========Our Roadmap start ======== */
+
+.our-roadmap-area {
+    padding: 80px 0;
+    background: #E3F1FC;
+    /* position: relative; */
+
+}
+
+.roadmap-title h2{
+	font-family: 'Sigmar One', sans-serif;
+	padding: 20px 10px;
+	color: #fff;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: #FFD942;
+	text-shadow: 3px 5px 0px #000;
+	-webkit-text-stroke-width: 3;
+	-webkit-text-stroke-color: #000;
+	line-height: 80px;
+	margin-bottom: 20px;
+	margin-left: -10px;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.roadmap-title p {
+    color: #000;
+    text-align: center;
+    font-family: "Baloo Bhai 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    margin-bottom: 38px;
+}
+
+.roadmap-item {
+    padding: 35px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    background: linear-gradient(180deg, #B6ECFF 31.89%, #B6FFE9 100%);
+    box-shadow: 5px 5px 0px 0px #000;
+    min-height: 360px;
+    margin-bottom: 30px;
+   
+}
+
+
+.roadm-t{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.roadmap-item img {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.roadm-t h2 {
+	font-family: 'Sigmar One', sans-serif;
+	padding: 20px 10px;
+	color: #fff;
+    font-size: 42px; 
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: #FFD942;
+	text-shadow: 2px 2px 0px #000;
+	-webkit-text-stroke-width: 3;
+	-webkit-text-stroke-color: #000;
+	line-height: 80px;
+	margin-bottom: 20px;
+	margin-left: -10px;
+    line-height: 2px;
+	text-align: center;
+	margin-bottom: 25px;
+   
+}
+
+.roadmap-item ul li {
+    color: #000;
+    font-family: "Baloo Bhai 2";
+    font-size: 18px; 
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: 22px;
+}
+
+.roadmap-item ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #000;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: -22px;
+    top: 5px;
+}
+/* ========footer======== */
+
+footer {
+    padding: 80px 0 0;
+    background: #E3F1FC;
+    background-image: url(../images/images-footer-btm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+
+}
+
+
+.disclaimer-inner {
+    padding: 35px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    background: #3EDBAC;
+    box-shadow: 5px 5px 0px 0px #000;
+    margin-bottom: 170px;
+}
+.disclaimer-inner h2{
+    font-family: 'Sigmar One', sans-serif;
+	padding: 20px 10px;
+	color: #fff;
+    font-size: 42px; 
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: #FFD942;
+	text-shadow: 2px 2px 0px #000;
+	-webkit-text-stroke-width: 3;
+	-webkit-text-stroke-color: #000;
+	line-height: 80px;
+	margin-bottom: 20px;
+	margin-left: -10px;
+    line-height: 2px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.disclaimer-inner p{
+    text-align: center;
+}
+
+
+.footer-btm-content {
+    padding: 50px 0;
+}
+.footer-btm-content ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-btm-content ul li a{
+    transition: .3s;
+}
+.footer-btm-content ul li {
+    color: #000;
+    font-family: "Baloo Bhai 2";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 21.6px */
+}
+.footer-btm-content ul li:last-of-type a{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.footer-btm-content ul li:last-of-type a:hover{
+    transform: scale(1.2);
+}
+ html, body{
+    scroll-behavior: smooth;
+ }
+
+/* end all the css  */
+
+
+/* ========== */
+
