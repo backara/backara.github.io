@@ -56,12 +56,12 @@ a:hover {
 }
 
 .header {
-	background: #27262b !important;
+	background: #1565C0 !important;
 		border: #fff solid 2px;
 }
 
 .menu__inner {
-	background-color: #000 !important;
+	background-color: #1565C0 !important;
 }
 
 .accordion-button {
@@ -1268,7 +1268,7 @@ body {
 }
 
 [data-theme=dark] body {
-	background-color: #000;
+	background-color: #1565C0;
 	color: #fff;
 	border: #fff solid 5px;
 }
@@ -2639,7 +2639,7 @@ hr {
 }
 
 [data-theme="dark"] .home main {
-	background: #000;
+	background: #1565C0;
 		border: #fff solid 5px;
 }
 
@@ -2772,7 +2772,7 @@ hr {
 }
 
 .bg-secondary {
-	background-color: #000 !important
+	background-color: #1565C0 !important
 }
 
 .btn-outline-secondary {
