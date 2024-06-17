@@ -1,0 +1,68 @@
+@font-face {
+    font-family: JuliusSansOne;
+    src: url(../fonts/JuliusSansOne-Regular.ttf);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #00CC00;
+    /* background: url(./a.jpg); */
+    color: white;
+    font-family: JuliusSansOne;
+    padding: 80px 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.body_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.body_1 h1 {
+    font-size: 58px;
+}
+
+.s-bd-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s-bd-1 img {
+    width: 80px;
+}
+
+.s-bd-2 p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.s-s-s {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.s-s-s img {
+    width: 80px;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    color: #ffc4fd;
+}
