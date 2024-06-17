@@ -7,13 +7,16 @@ html,
 body {
     padding: 0;
     margin: 0;
+    border: none;
     box-sizing: border-box;
-    background-color: #00CC00;
-    /* background: url(./a.jpg); */
+    background: url(https://img5.thuthuatphanmem.vn/uploads/2021/07/09/hinh-nen-san-van-dong-dong_025306043.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: white;
     font-family: JuliusSansOne;
     padding: 80px 20px;
 }
+
 
 img {
     width: 100%;
@@ -26,6 +29,7 @@ img {
     gap: 50px;
     flex-wrap: wrap;
     margin-bottom: 80px;
+    
 }
 
 .body_1 h1 {
