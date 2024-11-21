@@ -1,0 +1,182 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Nunito', sans-serif;
+    font-size:20px;
+    background:#FFF url("./back.png") no-repeat top center;
+    background-size:cover;
+    text-shadow:1px 1px 1px #FFF;
+    color:#000;
+}
+.red {
+    background:red !important;
+}
+
+header {
+    background:url("../img/header.webp") no-repeat bottom center;
+    background-size:cover;
+    color:#fff;
+    padding-top:15rem;
+    position: relative;
+    overflow: hidden;
+    padding-bottom:150px;
+
+}
+
+.logo {
+    width:100%;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+.display-6 {
+    font-size:2rem !important;
+    font-weight:500;
+}
+
+.bgToken {
+    background:url("../img/tokenomics.webp") no-repeat bottom center;
+    background-size:cover;
+    color:#fff;
+    min-height:800px;
+    position: relative;
+
+    --mask:
+    radial-gradient(223.61px at 50% 300.00px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,
+    radial-gradient(223.61px at 50% -200px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.tokenList h1 {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+}
+
+.tokenList h1 img {
+    height:120px;
+    position: absolute;
+    top:-80px;
+    right:0;
+    left:0;
+    margin:0 auto 0 auto;
+}
+
+.mt-10 {
+    margin-top:10rem !important;
+}
+
+.tokenList .box {
+    border:3px dotted red;
+    border-radius:30px;
+    padding:2rem;
+    background:#fff;
+}
+
+.tokenList .box h1 {
+    font-weight:900;
+}
+
+.contract {
+    background:red;
+    color:#FFF;
+    padding:1rem;
+    border-radius:30px;
+    position:relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right:60px;
+    text-align:center;
+    text-shadow:none;
+}
+
+.contract img {
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.roadMap {
+    margin-top:-100px;
+}
+
+.roadMap .box {
+    background:#fff;
+    border-radius:30px;
+    padding:3rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.rBox {
+    background:#efefef;
+    padding:2rem;
+    border-radius:20px;
+}
+
+.partnersList img {
+    border-radius:30px;
+    padding:1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background:#fff;
+}
+
+footer {
+
+    --mask:
+            radial-gradient(223.61px at 50% 300.00px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,
+            radial-gradient(223.61px at 50% -200px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background:#fff;
+}
+
+.social {
+    height:50px;
+}
+
+@media only screen and (max-width: 767px) {
+        header {
+            padding-bottom:100px;
+        }
+
+    .display-6 {
+        font-size:24px !important;
+    }
+
+    .bgToken {
+        min-height:400px;
+    }
+
+    .tokenList h1 img {
+        margin-top:-20px;
+    }
+
+    .roadMap {
+        margin-top:-30px;
+
+    }
+    .rImg img {
+        border-radius:30px 30px 0 0 !important;
+    }
+
+    .roadMap .box {
+        padding:1.5rem;
+    }
+
+    footer {
+        mask:none !important;
+        overflow: hidden;
+    }
+
+    .joinUs {
+        transform: scale(2);
+        margin-bottom:150px;
+        padding-top:50px;
+    }
+}

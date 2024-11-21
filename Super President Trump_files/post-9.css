@@ -1,0 +1,22 @@
+.elementor-kit-9{--e-global-color-primary:#140178;--e-global-color-secondary:#8B79FF;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-typography-primary-font-family:"Kabob";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Kabob";--e-global-typography-secondary-font-weight:bold;--e-global-typography-text-font-family:"Kabob";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;font-family:"Jua", Sans-serif;background-color:#000000;background-position:center center;background-repeat:no-repeat;background-size:contain;}.elementor-kit-9 a{font-family:"Jua", Sans-serif;}.elementor-kit-9 h1{font-family:"Jua", Sans-serif;}.elementor-kit-9 h6{font-family:"Jua", Sans-serif;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1430px;}.e-con{--container-max-width:1430px;}.elementor-widget:not(:last-child){margin-block-end:29px;}.elementor-element{--widgets-spacing:29px 29px;}{}h1.entry-title{display:var(--page-title-display);}.elementor-kit-9 e-page-transition{background-color:#FFBC7D;}@media(min-width:1025px){.elementor-kit-9{background-attachment:fixed;}}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Kabob';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('https://trump47sol.com/wp-content/uploads/2021/08/Kabob-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Kabob';
+	font-style: normal;
+	font-weight: bold;
+	font-display: auto;
+	src: url('https://trump47sol.com/wp-content/uploads/2021/08/Kabob-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Kabob';
+	font-style: normal;
+	font-weight: 900;
+	font-display: auto;
+	src: url('https://trump47sol.com/wp-content/uploads/2021/08/KabobExtrabold-Regular.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
