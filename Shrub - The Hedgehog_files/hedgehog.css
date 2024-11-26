@@ -1,0 +1,577 @@
+.section_hero {
+  background-image: linear-gradient(#ffe8a1, #e9c538);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  position: relative;
+}
+
+.grass_hero {
+  opacity: .65;
+  background-image: url('../images/grass_hero.svg');
+  background-position: 50% 100%;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  position: absolute;
+  inset: auto 0% 0%;
+}
+
+.chara_hero {
+  height: 65%;
+  position: absolute;
+  inset: auto auto -6%;
+}
+
+.logo {
+  height: 40%;
+  position: absolute;
+  inset: 6% auto auto;
+}
+
+.tg {
+  z-index: 50;
+  color: #000;
+  background-color: #f1cb2c;
+  background-image: url('../images/tg.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  border: 3px solid #000;
+  border-bottom-width: 6px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 53px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  padding: 0;
+  font-size: 23px;
+  line-height: 23px;
+  display: flex;
+  position: absolute;
+  inset: auto auto 0% 0%;
+}
+
+.tg:hover {
+  border-top-width: 6px;
+  border-bottom-width: 3px;
+}
+
+.x {
+  z-index: 50;
+  color: #000;
+  background-color: #f1cb2c;
+  background-image: url('../images/x.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  border: 3px solid #000;
+  border-bottom-width: 6px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 53px;
+  margin: 25px;
+  padding: 0;
+  font-size: 23px;
+  line-height: 23px;
+  display: flex;
+  position: absolute;
+  inset: auto 0% 0% auto;
+}
+
+.x:hover {
+  border-top-width: 6px;
+  border-bottom-width: 3px;
+}
+
+.button_buy {
+  color: #000;
+  background-color: #f1cb2c;
+  border: 3px solid #000;
+  border-bottom-width: 10px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin-bottom: 25px;
+  padding-top: 11px;
+  font-family: Positiveforward, sans-serif;
+  font-size: 23px;
+  line-height: 23px;
+  display: flex;
+  position: absolute;
+  inset: auto auto 0%;
+}
+
+.button_buy:hover {
+  border-top-width: 10px;
+  border-bottom-width: 3px;
+}
+
+.grain {
+  z-index: 2000;
+  opacity: .5;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background-image: url('../images/grain.png');
+  background-position: 0 0;
+  background-size: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  inset: 0%;
+}
+
+.rays {
+  opacity: .43;
+  mix-blend-mode: luminosity;
+  background-image: url('../images/rays.png');
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.separator {
+  background-color: #f1cb2c;
+  border-top: 4px solid #000;
+  border-bottom: 12px solid #000;
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.separator_in {
+  background-color: #917915;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.ca {
+  color: #fff3be;
+  background-color: #0000;
+  font-family: Positiveforward, sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.section_about {
+  background-image: linear-gradient(#e9c538, #ffe47c);
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 75px;
+  display: flex;
+  position: relative;
+}
+
+.grass {
+  opacity: .5;
+  background-image: url('../images/grass_01.svg');
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  inset: 0% 0% auto;
+}
+
+.block_h1 {
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  display: flex;
+  position: relative;
+  transform: skew(0deg, -5deg);
+}
+
+.h1 {
+  color: #ffe98d;
+  text-align: center;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-family: Positiveforward, sans-serif;
+  font-size: 120px;
+  line-height: 100px;
+  display: block;
+  position: relative;
+}
+
+.h1.shadow {
+  color: #000;
+  margin-top: 10px;
+  position: absolute;
+  inset: 0%;
+}
+
+.block_para {
+  background-color: #f1cb2c;
+  border: 3px solid #000;
+  border-bottom-width: 10px;
+  border-radius: 20px;
+  width: 650px;
+  height: auto;
+  margin-top: -37px;
+  padding: 15px;
+  position: relative;
+  transform: skew(0deg, -4deg);
+}
+
+.block_in {
+  background-color: #917915;
+  border-radius: 15px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px 25px;
+  display: flex;
+}
+
+.paragraph {
+  color: #fff3be;
+  text-align: center;
+  -webkit-text-stroke-color: #fff7db;
+  margin-bottom: 0;
+  font-family: Positiveforward, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.shrub_about {
+  height: 300px;
+  margin-top: -32px;
+  position: relative;
+}
+
+.image {
+  height: 100%;
+}
+
+.image-2 {
+  position: absolute;
+  inset: 11% 0% 0% 11%;
+}
+
+.button_dextools {
+  color: #000;
+  background-color: #f1cb2c;
+  border: 3px solid #000;
+  border-bottom-width: 10px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  padding-top: 11px;
+  font-family: Positiveforward, sans-serif;
+  font-size: 23px;
+  line-height: 23px;
+  display: flex;
+  position: static;
+  inset: auto auto 0%;
+}
+
+.button_dextools:hover {
+  border-top-width: 10px;
+  border-bottom-width: 3px;
+}
+
+.block_tokenomics {
+  background-color: #f1cb2c;
+  border: 3px solid #000;
+  border-bottom-width: 10px;
+  border-radius: 20px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 650px;
+  height: auto;
+  margin-top: 139px;
+  padding: 15px;
+  display: flex;
+  position: relative;
+  transform: skew(0deg, -4deg);
+}
+
+.tokenomics_details {
+  color: #000;
+  background-color: #f1cb2c;
+  border: 3px solid #000;
+  border-bottom-width: 10px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 11px;
+  font-family: Positiveforward, sans-serif;
+  font-size: 23px;
+  line-height: 23px;
+  display: flex;
+  position: static;
+  inset: auto auto 0%;
+}
+
+.tokenomics_details:hover {
+  border-top-width: 10px;
+  border-bottom-width: 3px;
+}
+
+.block_paragraph {
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  margin-top: 50px;
+  display: flex;
+  transform: skew(0deg, -5deg);
+}
+
+.paragraph-2 {
+  text-align: center;
+  margin-bottom: 0;
+  font-family: Positiveforward, sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.image-3 {
+  height: 220px;
+  position: absolute;
+  inset: -58% auto auto;
+}
+
+.section_tokenomics, .section_memes {
+  background-image: linear-gradient(#e9c538, #ffe47c);
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+  padding-bottom: 75px;
+  display: flex;
+  position: relative;
+}
+
+.block_memes {
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 75px;
+  display: flex;
+  position: relative;
+}
+
+.meme {
+  border: 3px solid #524309;
+  border-bottom-width: 5px;
+  border-radius: 17px;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 0 20px #fef595;
+}
+
+.fly {
+  z-index: 50;
+  height: 250px;
+  position: absolute;
+  inset: 40% auto auto;
+}
+
+.block_token {
+  background-color: #f1cb2c;
+  border: 3px solid #000;
+  border-bottom-width: 10px;
+  border-radius: 20px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 650px;
+  height: auto;
+  margin-top: 139px;
+  padding: 15px;
+  display: flex;
+  position: relative;
+  transform: skew(0deg, -4deg);
+}
+
+.tweet {
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: auto;
+  margin-top: 65px;
+  display: flex;
+}
+
+.code-embed {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .tweet {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 70%;
+    height: auto;
+    top: 10%;
+  }
+
+  .tg {
+    margin: 25px;
+    inset: 0% auto auto 0%;
+  }
+
+  .x {
+    inset: 0% 0% auto auto;
+  }
+
+  .button_buy {
+    width: 90%;
+  }
+
+  .h1 {
+    font-size: 80px;
+    line-height: 70px;
+  }
+
+  .block_para {
+    width: 90%;
+    height: auto;
+  }
+
+  .block_in {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .button_dextools {
+    width: 90%;
+  }
+
+  .block_tokenomics {
+    width: 90%;
+    height: auto;
+  }
+
+  .tokenomics_details, .block_paragraph {
+    width: 90%;
+  }
+
+  .image-3 {
+    height: 200px;
+    top: -60%;
+  }
+
+  .block_token {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .logo {
+    width: 90%;
+    top: 14%;
+  }
+
+  .tg, .x {
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+  }
+
+  .ca {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .block_h1 {
+    margin-top: -36px;
+  }
+
+  .h1 {
+    font-size: 50px;
+    line-height: 45px;
+  }
+
+  .h1.shadow {
+    margin-top: 5px;
+    display: flex;
+  }
+
+  .block_in {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .paragraph {
+    font-size: 23px;
+  }
+
+  .shrub_about {
+    width: 65%;
+    height: auto;
+  }
+
+  .tokenomics_details {
+    text-align: center;
+    width: 95%;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .image-3 {
+    top: -68%;
+  }
+
+  .meme {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+@font-face {
+  font-family: 'Positiveforward';
+  src: url('../fonts/PositiveForward.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
