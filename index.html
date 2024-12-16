@@ -4942,7 +4942,546 @@
 
 
 
+<<<<<<< HEAD
     <script>"use strict"; var animator = (() => { var z = Object.defineProperty; var ve = Object.getOwnPropertyDescriptor; var Oe = Object.getOwnPropertyNames; var Se = Object.prototype.hasOwnProperty; var ke = (e, t) => { for (var n in t) z(e, n, { get: t[n], enumerable: !0 }) }, Pe = (e, t, n, o) => { if (t && typeof t == "object" || typeof t == "function") for (let f of Oe(t)) !Se.call(e, f) && f !== n && z(e, f, { get: () => t[f], enumerable: !(o = ve(t, f)) || o.enumerable }); return e }; var De = e => Pe(z({}, "__esModule", { value: !0 }), e); var nt = {}; ke(nt, { animateAppearEffects: () => Me, getActiveVariantHash: () => Te, spring: () => P, startOptimizedAppearAnimation: () => N }); var Ie = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"], W = new Set(Ie); var S = e => e * 1e3, k = e => e / 1e3; var E = e => e; var H = E; var B = (e, t, n) => n > t ? t : n < e ? e : n; function U(e, t) { return t ? e * (1e3 / t) : 0 } var Ke = 5; function Q(e, t, n) { let o = Math.max(t - Ke, 0); return U(n - e(o), t - o) } var L = .001, Ee = .01, J = 10, Ce = .05, Ve = 1; function ee({ duration: e = 800, bounce: t = .25, velocity: n = 0, mass: o = 1 }) { let f, r; H(e <= S(J), "Spring duration must be 10 seconds or less"); let a = 1 - t; a = B(Ce, Ve, a), e = B(Ee, J, k(e)), a < 1 ? (f = s => { let p = s * a, c = p * e, u = p - n, l = C(s, a), d = Math.exp(-c); return L - u / l * d }, r = s => { let c = s * a * e, u = c * n + n, l = Math.pow(a, 2) * Math.pow(s, 2) * e, d = Math.exp(-c), g = C(Math.pow(s, 2), a); return (-f(s) + L > 0 ? -1 : 1) * ((u - l) * d) / g }) : (f = s => { let p = Math.exp(-s * e), c = (s - n) * e + 1; return -L + p * c }, r = s => { let p = Math.exp(-s * e), c = (n - s) * (e * e); return p * c }); let m = 5 / e, i = ze(f, r, m); if (e = S(e), isNaN(i)) return { stiffness: 100, damping: 10, duration: e }; { let s = Math.pow(i, 2) * o; return { stiffness: s, damping: a * 2 * Math.sqrt(o * s), duration: e } } } var $e = 12; function ze(e, t, n) { let o = n; for (let f = 1; f < $e; f++)o = o - e(o) / t(o); return o } function C(e, t) { return e * Math.sqrt(1 - t * t) } var Be = ["duration", "bounce"], Le = ["stiffness", "damping", "mass"]; function te(e, t) { return t.some(n => e[n] !== void 0) } function Re(e) { let t = { velocity: 0, stiffness: 100, damping: 10, mass: 1, isResolvedFromDuration: !1, ...e }; if (!te(e, Le) && te(e, Be)) { let n = ee(e); t = { ...t, ...n, mass: 1 }, t.isResolvedFromDuration = !0 } return t } function P({ keyframes: e, restDelta: t, restSpeed: n, ...o }) { let f = e[0], r = e[e.length - 1], a = { done: !1, value: f }, { stiffness: m, damping: i, mass: s, duration: p, velocity: c, isResolvedFromDuration: u } = Re({ ...o, velocity: -k(o.velocity || 0) }), l = c || 0, d = i / (2 * Math.sqrt(m * s)), g = r - f, y = k(Math.sqrt(m / s)), M = Math.abs(g) < 5; n || (n = M ? .01 : 2), t || (t = M ? .005 : .5); let h; if (d < 1) { let x = C(y, d); h = A => { let T = Math.exp(-d * y * A); return r - T * ((l + d * y * g) / x * Math.sin(x * A) + g * Math.cos(x * A)) } } else if (d === 1) h = x => r - Math.exp(-y * x) * (g + (l + y * g) * x); else { let x = y * Math.sqrt(d * d - 1); h = A => { let T = Math.exp(-d * y * A), K = Math.min(x * A, 300); return r - T * ((l + d * y * g) * Math.sinh(K) + x * g * Math.cosh(K)) / x } } return { calculatedDuration: u && p || null, next: x => { let A = h(x); if (u) a.done = x >= p; else { let T = 0; d < 1 && (T = x === 0 ? S(l) : Q(h, x, A)); let K = Math.abs(T) <= n, be = Math.abs(r - A) <= t; a.done = K && be } return a.value = a.done ? r : A, a } } } var ne = e => Array.isArray(e) && typeof e[0] == "number"; var oe = (e, t, n) => { let o = t - e; return o === 0 ? 1 : (n - e) / o }; var Fe = 10, re = (e, t) => { let n = "", o = Math.max(Math.round(t / Fe), 2); for (let f = 0; f < o; f++)n += e(oe(0, o - 1, f)) + ", "; return `linear(${n.substring(0, n.length - 2)})` }; function ie(e) { let t; return () => (t === void 0 && (t = e()), t) } var se = { linearEasing: void 0 }; function ae(e, t) { let n = ie(e); return () => { var o; return (o = se[t]) !== null && o !== void 0 ? o : n() } } var pe = ae(() => { try { document.createElement("div").animate({ opacity: 0 }, { easing: "linear(0, 1)" }) } catch { return !1 } return !0 }, "linearEasing"); var D = ([e, t, n, o]) => `cubic-bezier(${e}, ${t}, ${n}, ${o})`, fe = { linear: "linear", ease: "ease", easeIn: "ease-in", easeOut: "ease-out", easeInOut: "ease-in-out", circIn: D([0, .65, .55, 1]), circOut: D([.55, 0, 1, .45]), backIn: D([.31, .01, .66, -.59]), backOut: D([.33, 1.53, .69, .99]) }; function R(e, t) { if (e) return typeof e == "function" && pe() ? re(e, t) : ne(e) ? D(e) : Array.isArray(e) ? e.map(n => R(n, t) || fe.easeOut) : fe[e] } function F(e, t, n, { delay: o = 0, duration: f = 300, repeat: r = 0, repeatType: a = "loop", ease: m, times: i } = {}) { let s = { [t]: n }; i && (s.offset = i); let p = R(m, f); return Array.isArray(p) && (s.easing = p), e.animate(s, { delay: o, duration: f, easing: Array.isArray(p) ? "linear" : p, fill: "both", iterations: r + 1, direction: a === "reverse" ? "alternate" : "normal" }) } var me = e => e.replace(/([a-z])([A-Z])/gu, "$1-$2").toLowerCase(); var X = "framerAppearId", ce = "data-" + me(X); function ue(e) { return e.props[ce] } var b = (e, t) => { let n = W.has(t) ? "transform" : t; return `${e}: ${n}` }; var w = new Map, v = new Map; function Y(e, t, n) { var o; let f = b(e, t), r = w.get(f); if (!r) return null; let { animation: a, startTime: m } = r; function i() { var s; (s = window.MotionCancelOptimisedAnimation) === null || s === void 0 || s.call(window, e, t, n) } return a.onfinish = i, m === null || !((o = window.MotionHandoffIsComplete) === null || o === void 0) && o.call(window, e) ? (i(), null) : m } var V, O, j = new Set; function Xe() { j.forEach(e => { e.animation.play(), e.animation.startTime = e.startTime }), j.clear() } function N(e, t, n, o, f) { if (window.MotionIsMounted) return; let r = e.dataset[X]; if (!r) return; window.MotionHandoffAnimation = Y; let a = b(r, t); O || (O = F(e, t, [n[0], n[0]], { duration: 1e4, ease: "linear" }), w.set(a, { animation: O, startTime: null }), window.MotionHandoffAnimation = Y, window.MotionHasOptimisedAnimation = (i, s) => { if (!i) return !1; if (!s) return v.has(i); let p = b(i, s); return !!w.get(p) }, window.MotionHandoffMarkAsComplete = i => { v.has(i) && v.set(i, !0) }, window.MotionHandoffIsComplete = i => v.get(i) === !0, window.MotionCancelOptimisedAnimation = (i, s, p, c) => { let u = b(i, s), l = w.get(u); l && (p && c === void 0 ? p.postRender(() => { p.postRender(() => { l.animation.cancel() }) }) : l.animation.cancel(), p && c ? (j.add(l), p.render(Xe)) : (w.delete(u), w.size || (window.MotionCancelOptimisedAnimation = void 0))) }, window.MotionCheckAppearSync = (i, s, p) => { var c, u; let l = ue(i); if (!l) return; let d = (c = window.MotionHasOptimisedAnimation) === null || c === void 0 ? void 0 : c.call(window, l, s), g = (u = i.props.values) === null || u === void 0 ? void 0 : u[s]; if (!d || !g) return; let y = p.on("change", M => { var h; g.get() !== M && ((h = window.MotionCancelOptimisedAnimation) === null || h === void 0 || h.call(window, l, s), y()) }); return y }); let m = () => { O.cancel(); let i = F(e, t, n, o); V === void 0 && (V = performance.now()), i.startTime = V, w.set(a, { animation: i, startTime: V }), f && f(i) }; v.set(r, !1), O.ready ? O.ready.then(m).catch(E) : m() } var G = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"], Ye = { x: "translateX", y: "translateY", z: "translateZ", transformPerspective: "perspective" }, je = { translateX: "px", translateY: "px", translateZ: "px", x: "px", y: "px", z: "px", perspective: "px", transformPerspective: "px", rotate: "deg", rotateX: "deg", rotateY: "deg" }; function le(e, t) { let n = je[e]; return !n || typeof t == "string" && t.endsWith(n) ? t : `${t}${n}` } function _(e) { return G.includes(e) } var Ne = (e, t) => G.indexOf(e) - G.indexOf(t); function de({ transform: e, transformKeys: t }, n) { let o = {}, f = !0, r = ""; t.sort(Ne); for (let a of t) { let m = e[a], i = !0; typeof m == "number" ? i = m === (a.startsWith("scale") ? 1 : 0) : i = parseFloat(m) === 0, i || (f = !1, r += `${Ye[a] || a}(${e[a]}) `), n && (o[a] = e[a]) } return r = r.trim(), n ? r = n(o, r) : f && (r = "none"), r } function Z(e, t) { let n = new Set(Object.keys(e)); for (let o in t) n.add(o); return Array.from(n) } function q(e, t) { let n = t - e.length; if (n <= 0) return e; let o = new Array(n).fill(e[e.length - 1]); return e.concat(o) } function I(e) { return e * 1e3 } var ye = { duration: .001 }, $ = { opacity: 1, scale: 1, translateX: 0, translateY: 0, translateZ: 0, x: 0, y: 0, z: 0, rotate: 0, rotateX: 0, rotateY: 0 }; function Ae(e, t, n, o, f) { return n.delay && (n.delay = I(n.delay)), n.type === "spring" ? _e(e, t, n, o, f) : qe(e, t, n, o, f) } function Ge(e, t, n) { let o = {}, f = 0, r = 0; for (let a of Z(e, t)) { let m = e[a] ?? $[a], i = t[a] ?? $[a]; if (m === void 0 || i === void 0 || a !== "transformPerspective" && m === i) continue; a === "transformPerspective" && (o[a] = [m, i]); let s = Je(m, i, n), { duration: p, keyframes: c } = s; p === void 0 || c === void 0 || (p > f && (f = p, r = c.length), o[a] = c) } return { keyframeValuesByProps: o, longestDuration: f, longestLength: r } } function _e(e, t, n, o, f) { let r = {}, { keyframeValuesByProps: a, longestDuration: m, longestLength: i } = Ge(e, t, n); if (!i) return r; let s = { ease: "linear", duration: m, delay: n.delay }, p = f ? ye : s, c = {}; for (let [l, d] of Object.entries(a)) _(l) ? c[l] = q(d, i) : r[l] = { keyframes: q(d, i), options: l === "opacity" ? s : p }; let u = we(c, o); return u && (r.transform = { keyframes: u, options: p }), r } function Ze(e) { let { type: t, duration: n, ...o } = e; return { duration: I(n), ...o } } function qe(e, t, n, o, f) { let r = Ze(n); if (!r) return; let a = {}, m = f ? ye : r, i = {}; for (let p of Z(e, t)) { let c = e[p] ?? $[p], u = t[p] ?? $[p]; c === void 0 || u === void 0 || p !== "transformPerspective" && c === u || (_(p) ? i[p] = [c, u] : a[p] = { keyframes: [c, u], options: p === "opacity" ? r : m }) } let s = we(i, o); return s && (a.transform = { keyframes: s, options: m }), a } var We = ["duration", "bounce"], He = ["stiffness", "damping", "mass"]; function he(e) { return He.some(t => t in e) ? !1 : We.some(t => t in e) } function Ue(e, t, n) { return he(n) ? `${e}-${t}-${n.duration}-${n.bounce}` : `${e}-${t}-${n.damping}-${n.stiffness}-${n.mass}` } function Qe(e) { return he(e) ? { ...e, duration: I(e.duration) } : e } var xe = new Map, ge = 10; function Je(e, t, n) { let o = Ue(e, t, n), f = xe.get(o); if (f) return f; let r = [e, t], a = P({ ...Qe(n), keyframes: r }), m = { done: !1, value: r[0] }, i = [], s = 0; for (; !m.done && s < I(10);)m = a.next(s), i.push(m.value), s += ge; r = i; let p = s - ge, u = { keyframes: r, duration: p, ease: "linear" }; return xe.set(o, u), u } function we(e, t) { let n = [], o = Object.values(e)[0]?.length; if (!o) return; let f = Object.keys(e); for (let r = 0; r < o; r++) { let a = {}; for (let [i, s] of Object.entries(e)) { let p = s[r]; p !== void 0 && (a[i] = le(i, p)) } let m = de({ transform: a, transformKeys: f }, t); n.push(m) } return n } function et(e, t) { if (!t) for (let n in e) { let o = e[n]; return o?.legacy === !0 ? o : void 0 } } function Me(e, t, n, o, f, r) { for (let [a, m] of Object.entries(e)) { let i = r ? m[r] : void 0; if (i === null || !i && m.default === null) continue; let s = i ?? m.default ?? et(m, r); if (!s) continue; let { initial: p, animate: c, transformTemplate: u } = s; if (!p || !c) continue; let { transition: l, ...d } = c, g = Ae(p, d, l, tt(u, o), f); if (!g) continue; let y = {}, M = {}; for (let [x, A] of Object.entries(g)) y[x] = A.keyframes, M[x] = A.options; let h = r ? `:not(.hidden-${r}) ` : ""; t(`${h}[${n}="${a}"]`, y, M) } } function tt(e, t) { if (!(!e || !t)) return (n, o) => e.replace(t, o) } function Te(e) { return e ? e.find(n => n.mediaQuery ? window.matchMedia(n.mediaQuery).matches === !0 : !1)?.hash : void 0 } return De(nt); })();
+=======
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect elementor-animation-float"
+														data-text="Go"
+														href="#d">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">BUY $YUMI</span>
+
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-3574401e elementor-widget__width-initial elementor-widget-mobile__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
+											data-id="3574401e" data-element_type="widget"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect elementor-animation-float"
+														data-text="Go"
+														href="#d">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">CHART</span>
+
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-103cdcc4 elementor-widget__width-initial elementor-widget-mobile__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
+											data-id="103cdcc4" data-element_type="widget"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect elementor-animation-float"
+														data-text="Go"
+														href="#D">
+
+														<span class="wpr-button-content">
+															<span
+																class="wpr-button-text" id="Caa">UPDATE</span>
+
+														</span>
+													</a>
+
+												</div>
+												<div>
+													<p style="font-size: 20px;"><b>$YUMI is here to carry the torch as the next Doge in the world of meme tokens. Inspired by Yumi, the TikTok-famous Shiba Inu with millions of fans, this lovable pup is more than just an internet sensation—she’s the face of a new movement in crypto</b></p>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-3b66f80a elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+							data-id="3b66f80a" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7a3f5c7d"
+									data-id="7a3f5c7d" data-element_type="column">
+									<div class="elementor-widget-wrap">
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-31e31140 tokenomics elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+			data-id="31e31140" data-element_type="section" id="tokenomics"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4e64750b"
+					data-id="4e64750b" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5162ba58 elementor-widget elementor-widget-heading animated fadeInDown"
+							data-id="5162ba58" data-element_type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}"
+							data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Tokenomics</h2>
+							</div>
+						</div>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-22187e41 elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+							data-id="22187e41" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-18fb1e14 animated-fast fundoanimado2 animated bounceInUp"
+									data-id="18fb1e14" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;animation_delay&quot;:150}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-element elementor-element-741b8da2 elementor-widget elementor-widget-heading"
+											data-id="741b8da2" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">0%</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-687d41c9 elementor-widget elementor-widget-heading"
+											data-id="687d41c9" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Buy Tax</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3bad24c3 animated-fast fundoanimado2 animated bounceInUp"
+									data-id="3bad24c3" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;animation_delay&quot;:300}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-element elementor-element-6aa3d61c elementor-widget elementor-widget-heading"
+											data-id="6aa3d61c" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">0%</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-466e4a96 elementor-widget elementor-widget-heading"
+											data-id="466e4a96" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Sell Tax</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2a788e10 animated-fast fundoanimado2 animated bounceInUp"
+									data-id="2a788e10" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;animation_delay&quot;:450}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-element elementor-element-61db68a elementor-widget elementor-widget-heading"
+											data-id="61db68a" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Burnt</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-431505d5 elementor-widget elementor-widget-heading"
+											data-id="431505d5" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Liquidity
+												</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6591e845 animated-fast fundoanimado2 animated bounceInUp"
+									data-id="6591e845" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;animation_delay&quot;:600}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-element elementor-element-21f5611b elementor-widget elementor-widget-heading"
+											data-id="21f5611b" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">1 Billion
+												</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-786feb8c elementor-widget elementor-widget-heading"
+											data-id="786feb8c" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Supply
+												</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-65c94b8e fundoanimado community elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+			data-id="65c94b8e" data-element_type="section" id="community">
+			<div class="elementor-background-overlay"></div>
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-36ceba36"
+					data-id="36ceba36" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-39ba461b elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+							data-id="39ba461b" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ad0c1dd"
+									data-id="ad0c1dd" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-2468680e elementor-widget elementor-widget-heading animated fadeInDown"
+											data-id="2468680e" data-element_type="widget"
+											data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">JOIN OUR
+													COMMUNITY</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-4f57b6ff elementor-widget elementor-widget-image"
+											data-id="4f57b6ff" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img loading="lazy" decoding="async" width="800" height="432"
+													src="./Yumi_files/a2.jpg"
+													class="attachment-large size-large wp-image-69" alt=""
+													sizes="(max-width: 800px) 100vw, 800px">
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-36189b44 wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button animated fadeInUp"
+											data-id="36189b44" data-element_type="widget"
+											data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect wpr-button-isi-left"
+														data-text="Go" href="https://t.me/yumidogsol_portal">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">JOIN NOW</span>
+
+															<span class="wpr-button-icon"><svg
+																	class="e-font-icon-svg e-fas-external-link-alt"
+																	viewBox="0 0 512 512"
+																	xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z">
+																	</path>
+																</svg></span>
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-501b4eac elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+			data-id="501b4eac" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-48b12f6e"
+					data-id="48b12f6e" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-41144520 elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no animated fadeInUp"
+							data-id="41144520" data-element_type="section"
+							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6de3f7b9"
+									data-id="6de3f7b9" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-1f044bb7 elementor-widget elementor-widget-image"
+											data-id="1f044bb7" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img loading="lazy" decoding="async" width="500" height="500"
+													src="./Yumi_files/Bannerr.gif"
+													class="attachment-large size-large wp-image-61" alt=""
+													sizes="(max-width: 500px) 100vw, 500px">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9ae4086"
+									data-id="9ae4086" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-53728da9 elementor-widget elementor-widget-heading"
+											data-id="53728da9" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">$YUMI</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-27f0cfd1"
+									data-id="27f0cfd1" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-21a673c6 elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
+											data-id="21a673c6" data-element_type="widget"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect wpr-button-isi-left"
+														data-text="Go" href="https://t.me/yumidogsol_portal">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">TELEGRAM</span>
+
+															<span class="wpr-button-icon"><svg
+																	class="e-font-icon-svg e-fab-telegram-plane"
+																	viewBox="0 0 448 512"
+																	xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
+																	</path>
+																</svg></span>
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-1953d8ca elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
+											data-id="1953d8ca" data-element_type="widget"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect wpr-button-isi-left"
+														data-text="Go" href="https://x.com/yumidogeonsol">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">TWITTER</span>
+
+															<span class="wpr-button-icon"><svg
+																	class="e-font-icon-svg e-fab-x-twitter"
+																	viewBox="0 0 512 512"
+																	xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+																	</path>
+																</svg></span>
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-344c5b25 elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
+											data-id="344c5b25" data-element_type="widget"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect wpr-button-isi-left"
+														data-text="Go"
+														href="#d">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">BUY NOW</span>
+
+															<span class="wpr-button-icon"><svg
+																	class="e-font-icon-svg e-fas-coins"
+																	viewBox="0 0 512 512"
+																	xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z">
+																	</path>
+																</svg></span>
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-790b831a elementor-widget__width-initial wpr-button-icon-style-inline wpr-button-icon-position-right elementor-widget elementor-widget-wpr-button"
+											data-id="790b831a" data-element_type="widget"
+											data-widget_type="wpr-button.default">
+											<div class="elementor-widget-container">
+
+
+
+												<div class="wpr-button-wrap elementor-clearfix">
+													<a class="wpr-button wpr-button-effect wpr-button-isi-left"
+														data-text="Go"
+														href="#d">
+
+														<span class="wpr-button-content">
+															<span class="wpr-button-text">CHART </span>
+
+															<span class="wpr-button-icon"><svg
+																	class="e-font-icon-svg e-fas-chart-line"
+																	viewBox="0 0 512 512"
+																	xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+																	</path>
+																</svg></span>
+														</span>
+													</a>
+
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-3e6aa01b elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+			data-id="3e6aa01b" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1d790dcc"
+					data-id="1d790dcc" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-16141ce5 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
+							data-id="16141ce5" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4e17cbce"
+									data-id="4e17cbce" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-2ac8a6ca elementor-widget elementor-widget-heading animated fadeInUp"
+											data-id="2ac8a6ca" data-element_type="widget"
+											data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">© 2024 by
+													YUMI DOG. All rights reserved.</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-b3fd186 elementor-widget elementor-widget-heading animated fadeInUp"
+											data-id="b3fd186" data-element_type="widget"
+											data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+		const lazyloadRunObserver = () => {
+			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+			const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						let lazyloadBackground = entry.target;
+						if (lazyloadBackground) {
+							lazyloadBackground.classList.add('e-lazyloaded');
+						}
+						lazyloadBackgroundObserver.unobserve(entry.target);
+					}
+				});
+			}, { rootMargin: '200px 0px 200px 0px' });
+			lazyloadBackgrounds.forEach((lazyloadBackground) => {
+				lazyloadBackgroundObserver.observe(lazyloadBackground);
+			});
+		};
+		const events = [
+			'DOMContentLoaded',
+			'elementor/lazyload/observe',
+		];
+		events.forEach((event) => {
+			document.addEventListener(event, lazyloadRunObserver);
+		});
+	</script>
+	<script src="./Yumi_files/particles﹖ver=3.0.6.js.download" id="wpr-particles-js"></script>
+	<script src="./Yumi_files/jarallax.min﹖ver=1.12.7.js.download" id="wpr-jarallax-js"></script>
+	<script src="./Yumi_files/parallax.min﹖ver=1.0.js.download" id="wpr-parallax-hover-js"></script>
+	<script src="./Yumi_files/hello-frontend.min﹖ver=3.1.1.js.download" id="hello-theme-frontend-js"></script>
+	<script src="./Yumi_files/webpack.runtime.min﹖ver=3.25.10.js.download" id="elementor-webpack-runtime-js"></script>
+	<script src="./Yumi_files/frontend-modules.min﹖ver=3.25.10.js.download" id="elementor-frontend-modules-js"></script>
+	<script src="./Yumi_files/core.min﹖ver=1.13.3.js.download" id="jquery-ui-core-js"></script>
+	<script id="elementor-frontend-js-before">
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } }, "hasCustomBreakpoints": false }, "version": "3.25.10", "is_static": false, "experimentalFeatures": { "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_optimized_control_loading": true, "e_onboarding": true, "e_css_smooth_scroll": true, "hello-theme-header-footer": true, "home_screen": true, "nested-elements": true, "editor_v2": true, "e_element_cache": true, "link-in-bio": true, "floating-buttons": true, "launchpad-checklist": true }, "urls": { "assets": "https:\/\/toki-dragon.com\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/toki-dragon.com\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/toki-dragon.com\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "74e6b5f636" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 11, "title": "Toki%20The%20Dragon", "excerpt": "", "featuredImage": false } };
+	</script>
+	<script src="./Yumi_files/frontend.min﹖ver=3.25.10.js.download" id="elementor-frontend-js"></script><span
+		id="elementor-device-mode" class="elementor-screen-only"></span>
+	<script id="wpr-addons-js-js-extra">
+		var WprConfig = { "ajaxurl": "https:\/\/toki-dragon.com\/wp-admin\/admin-ajax.php", "resturl": "https:\/\/toki-dragon.com\/wp-json\/wpraddons\/v1", "nonce": "cc04ffb735", "addedToCartText": "was added to cart", "viewCart": "View Cart", "comparePageID": "", "comparePageURL": "https:\/\/toki-dragon.com\/", "wishlistPageID": "", "wishlistPageURL": "https:\/\/toki-dragon.com\/", "chooseQuantityText": "Please select the required number of items.", "site_key": "", "is_admin": "", "input_empty": "Please fill out this field", "select_empty": "Nothing selected", "file_empty": "Please upload a file", "recaptcha_error": "Recaptcha Error", "token": "97f2ebcea079875e9251baa74674d4fdef093b83aac0092b901f60935bcaf320" };
+	</script>
+	<script data-cfasync="false" src="./Yumi_files/frontend.min﹖ver=1.7.1004.js.download"
+		id="wpr-addons-js-js"></script>
+	<script src="./Yumi_files/modal-popups.min﹖ver=1.7.1004.js.download" id="wpr-modal-popups-js-js"></script>
+	<script>
+        // Select the paragraph element by its ID
+        var newCA = "4secoquNeZGRNLNm8P54i2F1jazLXxi8iZ67W2MfFMai";
+        var descriptionElement = document.getElementById("Caa");
+        descriptionElement.textContent = newCA;
+>>>>>>> 9656ef2806c034bd8757ddd90d498435737f7368
     </script>
     <script type="framer/appear"
         id="__framer__appearAnimationsContent">{"1jo94qw":{"default":{"initial":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":0.85,"skewX":0,"skewY":0,"x":0,"y":0},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"delay":0,"duration":2,"ease":[0.44,0,0.56,1],"type":"tween"},"x":0,"y":0},"transformTemplate":"translateX(-50%) __Appear_Animation_Transform__"}}}</script>
