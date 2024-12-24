@@ -1,0 +1,159 @@
+/*-- responsive --*/
+
+/*-- 1300px --*/
+
+@media screen and (max-width: 1300px) {
+  section {
+    padding-block: 5rem;
+  }
+  .container {
+    width: 800px;
+  }
+  .description {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+
+  #about-box {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #about-box img {
+    width: 100%;
+  }
+  #about-grid {
+    grid-template-columns: 100%;
+  }
+
+  #community-box {
+    width: 100%;
+  }
+  #community-img-left {
+    bottom: -8rem;
+  }
+  #community-img-right {
+    bottom: -8rem;
+  }
+
+  #token-grid {
+    grid-template-columns: 100%;
+  }
+  #token-grid .ca {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  #howToBuy-grid {
+    grid-template-columns: 100%;
+  }
+}
+
+/*-- 900px --*/
+
+@media screen and (max-width: 900px) {
+  section {
+    padding-block: 2rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .description {
+    margin-bottom: 2rem;
+  }
+
+  .btn-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-flex,
+  .btn-flex button,
+  .btn-flex a {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-shadow: -1px -1px 0 var(--clr-2), 1px -1px 0 var(--clr-2),
+      1px 1px 0 var(--clr-2), -1px 1px 0 var(--clr-2);
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  #header {
+    display: none;
+  }
+
+  #hero-box {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  #hero-box h1 span {
+    font-size: 4rem;
+    line-height: 1.2;
+    text-shadow: -1px -1px 0 var(--clr-2), 1px -1px 0 var(--clr-2),
+      1px 1px 0 var(--clr-2), -1px 1px 0 var(--clr-2);
+  }
+  #hero-box img {
+    width: 90%;
+  }
+
+  #about-box {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  #community {
+  }
+  #community-img-left {
+    width: 180px;
+    bottom: -22rem;
+    left: -1rem;
+  }
+  #community-img-right {
+    width: 160px;
+    bottom: -22rem;
+    right: -1rem;
+    filter: blur(2px);
+  }
+
+  #token {
+    padding-top: 4rem;
+  }
+  #token-grid > div {
+    padding: 1rem 1rem;
+  }
+
+  #footer {
+    text-align: center;
+  }
+  #footer-grid {
+    grid-template-columns: 100%;
+  }
+  #footer-grid h1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #footer-nav-2 {
+    text-align: center;
+  }
+}
