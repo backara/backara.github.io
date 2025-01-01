@@ -1,0 +1,136 @@
+.elementor-kit-6 {
+    --e-global-color-primary: #FAC17A;
+    --e-global-color-secondary: #EC5033;
+    --e-global-color-text: #FA983A;
+    --e-global-color-accent: #FFBE76;
+    --e-global-color-46d6663: #FB8D04;
+    --e-global-color-b5c3c1b: #FFBE76;
+    --e-global-color-98cfb6d: #000000;
+    --e-global-color-9a97977: #FFFFFF;
+    --e-global-color-4b6e3fa: #FB8D04;
+    --e-global-color-0aa3294: #FFFFFF;
+    --e-global-color-59e72b1: #F49F4C;
+    --e-global-color-6fd9e9e: #d3db1585;
+    --e-global-color-34455fe: #F89931;
+    --e-global-color-307570d: #FFBE76E0;
+    --e-global-color-aa1e3dc: #FFBE76;
+    --e-global-typography-primary-font-family: "Candy Font 1";
+    --e-global-typography-primary-font-size: 28px;
+    --e-global-typography-primary-font-weight: 500;
+    --e-global-typography-secondary-font-family: "Candy Font 2";
+    --e-global-typography-secondary-font-size: 55px;
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Candy Font 1";
+    --e-global-typography-text-font-size: 24px;
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-text-line-height: 1.2em;
+    --e-global-typography-accent-font-family: "Candy Font 1";
+    --e-global-typography-accent-font-size: 27px;
+    --e-global-typography-accent-font-weight: 400;
+    --e-global-typography-accent-line-height: 1.2em;
+    --e-global-typography-c60e6cf-font-family: "Candy Font 2";
+    --e-global-typography-c60e6cf-font-size: 128px;
+    --e-global-typography-c60e6cf-font-weight: 400;
+    --e-global-typography-c60e6cf-line-height: 1.2em;
+    --e-global-typography-2306c9b-font-family: "Candy Font 2";
+    --e-global-typography-2306c9b-font-size: 40px;
+    --e-global-typography-2306c9b-font-weight: 400;
+    --e-global-typography-2306c9b-line-height: 1.2em;
+    --e-global-typography-81a0788-font-family: "Candy Font 2";
+    --e-global-typography-81a0788-font-size: 33px;
+    --e-global-typography-81a0788-font-weight: 400;
+    --e-global-typography-81a0788-line-height: 1.2em;
+    --e-global-typography-ebcbcb5-font-family: "Candy Font 2";
+    --e-global-typography-ebcbcb5-font-size: 64px;
+    --e-global-typography-ebcbcb5-font-weight: 400;
+    --e-global-typography-ebcbcb5-line-height: 1.2em;
+    --e-global-typography-084ca76-font-family: "Candy Font 1";
+    --e-global-typography-084ca76-font-size: 23px;
+    --e-global-typography-084ca76-font-weight: 400;
+    --e-global-typography-084ca76-line-height: 1.2em;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1140px;
+}
+
+.e-con {
+    --container-max-width: 1140px;
+}
+
+.elementor-widget:not(:last-child) {
+    margin-block-end:20px;}
+
+.elementor-element {
+    --widgets-spacing: 20px 20px;
+}
+
+{
+}
+
+h1.entry-title {
+    display: var(--page-title-display);
+}
+
+.elementor-kit-6 e-page-transition {
+    background-color: #FFBC7D;
+}
+
+.site-header {
+    padding-inline-end:0px;padding-inline-start:0px;}
+
+@media(max-width: 1024px) {
+    .elementor-kit-6 {
+        --e-global-typography-c60e6cf-font-size:59px;
+        --e-global-typography-2306c9b-font-size: 30px;
+        --e-global-typography-81a0788-font-size: 20px;
+        --e-global-typography-ebcbcb5-font-size: 55px;
+    }
+
+    .elementor-section.elementor-section-boxed > .elementor-container {
+        max-width: 1024px;
+    }
+
+    .e-con {
+        --container-max-width: 1024px;
+    }
+}
+
+@media(max-width: 767px) {
+    .elementor-kit-6 {
+        --e-global-typography-accent-font-size:22px;
+        --e-global-typography-c60e6cf-font-size: 42px;
+        --e-global-typography-2306c9b-font-size: 30px;
+        --e-global-typography-81a0788-font-size: 20px;
+        --e-global-typography-ebcbcb5-font-size: 42px;
+    }
+
+    .elementor-section.elementor-section-boxed > .elementor-container {
+        max-width: 767px;
+    }
+
+    .e-con {
+        --container-max-width: 767px;
+    }
+}
+
+/* Start Custom Fonts CSS */
+@font-face {
+    font-family: 'Candy Font 1';
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+    src: url('https://mojothemonkey.vip/wp-content/uploads/2024/06/2DQGdEqgCP8j9XPUjXFDHGOyN0.woff2') format('woff2');
+}
+
+/* End Custom Fonts CSS */
+/* Start Custom Fonts CSS */
+@font-face {
+    font-family: 'Candy Font 2';
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+    src: url('https://mojothemonkey.vip/wp-content/uploads/2024/06/F9Izsx2dUTPKHYmT8KSTkFQPPt8.woff2') format('woff2');
+}
+
+/* End Custom Fonts CSS */

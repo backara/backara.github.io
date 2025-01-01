@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 2500 2500" style="enable-background:new 0 0 2500 2500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#3576EE;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<g id="Layer_x0020_1">
+	<g id="_2090574460704">
+		<path class="st0" d="M1250,0L1250,0c688,0,1250,563,1250,1250l0,0c0,688-563,1250-1250,1250l0,0C562,2500,0,1937,0,1250l0,0    C0,562,563,0,1250,0z"></path>
+		<g>
+			<path class="st1" d="M854,609h423c43,0,78,35,78,78v426c0,43-35,78-78,78H854c-43,0-78-35-78-78V687C776,644,811,609,854,609z"></path>
+			<path class="st1" d="M1379,1186h274c28,0,50,23,50,50v276c0,28-23,50-50,50h-274c-32,0-55-2-55,49v252c0,25-21,46-46,46h-251     c-25,0-46-21-46-46v-252c0-25,21-46,46-46h251c39,0,51-14,51-53v-276C1329,1208,1352,1186,1379,1186z"></path>
+		</g>
+	</g>
+</g>
+</svg>
